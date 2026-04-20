@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aotc-horse-sale.pages.dev/sitemap.xml
