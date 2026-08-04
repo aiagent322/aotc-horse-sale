@@ -197,9 +197,7 @@ body {
 .history-card p:last-child { margin-bottom: 0; }
 .sponsor-category { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin: 22px 0 10px; text-align: center; }
 .sponsor-category:first-of-type { margin-top: 4px; }
-.sponsor-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
-@media (min-width: 620px) { .sponsor-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 960px) { .sponsor-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.sponsor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
 .sponsor-card {
   background: var(--white);
   border: 1px solid var(--tan-light);
@@ -216,13 +214,14 @@ body {
 .sponsor-thumb {
   display: block;
   width: 100%;
-  max-height: 220px;
+  height: 220px;
   object-fit: cover;
   object-position: top center;
   border-radius: 6px;
   margin-bottom: 10px;
   cursor: zoom-in;
   border: 1px solid var(--tan-light);
+  background: var(--cream-dark);
   transition: opacity 0.15s;
 }
 .sponsor-thumb:hover { opacity: 0.85; }
