@@ -53,36 +53,13 @@ body {
   position: absolute; inset: 0;
   background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 80px);
 }
-.header-line1 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.5rem; font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 1;
-  position: relative;
-}
-.header-line2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem; font-weight: 500;
-  margin-top: 2px;
-  opacity: 0.85;
-  position: relative;
-}
-.header-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.4rem, 6vw, 2.2rem); font-weight: 700;
-  margin: 6px 0 2px;
-  letter-spacing: 0.5px;
-  position: relative;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
 .header-event {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(0.85rem, 3.5vw, 1.25rem); font-weight: 400;
-  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.3rem, 5.5vw, 2rem); font-weight: 800;
+  font-style: normal;
   color: var(--gold-light);
-  margin: 2px 0;
+  margin: 6px 0 2px;
+  letter-spacing: 0.3px;
   position: relative;
 }
 .header-date {
@@ -686,8 +663,6 @@ body {
    ══════════════════════════════════════ */
 @media (min-width: 480px) {
   .site-header { padding: 18px 16px 14px; }
-  .header-line1 { font-size: 0.55rem; letter-spacing: 3px; }
-  .header-line2 { font-size: 0.65rem; }
   .header-date { font-size: 0.75rem; }
   .header-venue { font-size: 0.7rem; }
   .header-disclaimer { font-size: 0.65rem; }
@@ -723,8 +698,6 @@ body {
    TWO-COLUMN CARDS (min-width: 720px)
    ══════════════════════════════════════ */
 @media (min-width: 720px) {
-  .header-line1 { font-size: 0.6rem; }
-  .header-line2 { font-size: 0.7rem; }
   .stats-bar { gap: 32px; }
   .stat-num { font-size: 18px; }
   .catalog-grid {
@@ -779,9 +752,6 @@ body {
 
 <!-- HEADER -->
 <header class="site-header">
-  <div class="header-line1">Bridle &amp; Bit AI · Sales Catalog AI Agent</div>
-  <div class="header-line2">AI Agent Example: Legacy Ranch Horse Sale</div>
-  <div class="header-title">Example Sale Catalog</div>
   <div class="header-event">11th Annual Legacy Ranch Horse Sale</div>
   <div class="header-hosts">K4 Ranch &amp; Diamond A Ranch</div>
   <div class="header-date">Saturday, September 19, 2026 · Sale at 6:30 p.m.</div>
