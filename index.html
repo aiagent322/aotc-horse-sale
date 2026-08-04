@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Art of the Cowgirl – Invitational Horse Sale Catalog 2026</title>
+<title>Legacy Ranch Horse Sale – 11th Annual Catalog 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -92,6 +92,14 @@ body {
   margin-top: 4px;
   position: relative;
 }
+.header-hosts {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem; font-weight: 600;
+  color: var(--cream);
+  opacity: 0.9;
+  margin-top: 3px;
+  position: relative;
+}
 .header-venue {
   font-family: 'Inter', sans-serif;
   font-size: 0.65rem; font-weight: 400;
@@ -113,6 +121,128 @@ body {
   margin-top: 2px;
   position: relative;
 }
+
+/* ── QUICK NAV ── */
+.site-nav {
+  background: var(--brown-dark);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 10px;
+}
+.site-nav a {
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,165,100,0.35);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.site-nav a:hover { background: rgba(212,165,100,0.15); border-color: var(--gold-light); }
+
+/* ── INFO SECTIONS (Schedule / Bidding / About) ── */
+.info-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  scroll-margin-top: 12px;
+}
+.info-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 700;
+  color: var(--brown-dark);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.info-section-sub {
+  text-align: center;
+  color: var(--brown-light);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--tan-light);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+.info-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brown-dark);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--tan-light);
+  padding-bottom: 8px;
+}
+.schedule-day + .schedule-day { margin-top: 14px; }
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--cream-dark);
+  font-size: 0.85rem;
+}
+.schedule-item:last-child { border-bottom: none; }
+.schedule-item .ev { color: var(--text); }
+.schedule-item .ev em { font-style: italic; color: var(--brown-dark); font-weight: 600; }
+.schedule-item .time { color: var(--gold); font-weight: 700; white-space: nowrap; }
+.contact-grid, .team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+@media (min-width: 620px) {
+  .contact-grid, .team-grid { grid-template-columns: 1fr 1fr; }
+}
+.contact-item .role, .team-grid .role {
+  font-weight: 700; color: var(--brown-dark);
+  display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.bidding-note {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.bidding-note ul, .bidding-note ol { margin: 6px 0 6px 20px; }
+.bidding-note li { margin-bottom: 4px; }
+.history-card p { font-size: 0.85rem; line-height: 1.65; margin-bottom: 10px; color: var(--text); }
+.history-card p:last-child { margin-bottom: 0; }
+.welcome-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--brown-dark);
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  white-space: pre-line;
+}
+.welcome-sign { text-align: center; font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); margin-top: 8px; }
+.terms-link-banner {
+  display: block;
+  text-align: center;
+  background: var(--cream-dark);
+  border: 1px solid var(--tan-light);
+  border-radius: 10px;
+  padding: 14px;
+  color: var(--brown-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+.terms-link-banner:hover { background: var(--tan-light); }
 
 /* ── STATS BAR ── */
 .stats-bar {
@@ -586,23 +716,33 @@ body {
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-line1">Bridle &amp; Bit AI · Sales Catalog AI Agent</div>
-  <div class="header-line2">AI Agent Example: Art of the Cowgirl Invitational Horse Sale</div>
+  <div class="header-line2">AI Agent Example: Legacy Ranch Horse Sale</div>
   <div class="header-title">Example Sale Catalog</div>
-  <div class="header-event">Art of the Cowgirl — Invitational Horse Sale</div>
-  <div class="header-date">February 28, 2026</div>
-  <div class="header-venue">Rancho Rio · Wickenburg, AZ</div>
-  <div class="header-disclaimer">Not affiliated with Art of the Cowgirl · AI-generated content — subject to errors and omissions</div>
+  <div class="header-event">11th Annual Legacy Ranch Horse Sale</div>
+  <div class="header-hosts">K4 Ranch &amp; Diamond A Ranch</div>
+  <div class="header-date">Saturday, September 19, 2026 · Sale at 6:30 p.m.</div>
+  <div class="header-venue">Prescott Rodeo Grounds · Prescott, AZ</div>
+  <div class="header-disclaimer">Not affiliated with the Legacy Ranch Horse Sale, K4 Ranch, or Diamond A Ranch · AI-generated content — subject to errors and omissions</div>
   <div class="header-credit">A public service from <em>Bridle &amp; Bit Magazine</em></div>
 </header>
 
+<!-- QUICK NAV -->
+<nav class="site-nav">
+  <a href="#catalogGrid">Catalog</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#bidding">Bidding Info</a>
+  <a href="#about">About the Ranches</a>
+  <a href="terms.html">Conditions of Sale</a>
+</nav>
+
 <!-- STATS BAR -->
 <div class="stats-bar">
-  <div class="stat-item"><span class="stat-num">62</span> Lots</div>
-  <div class="stat-item"><span class="stat-num">36</span> Geldings</div>
-  <div class="stat-item"><span class="stat-num">25</span> Mares</div>
-  <div class="stat-item"><span class="stat-num">1</span> Filly</div>
-  <div class="stat-item"><span class="stat-num">13</span> Breeds</div>
-  <div class="stat-item"><span class="stat-num">16</span> Colors</div>
+  <div class="stat-item"><span class="stat-num">47</span> Lots</div>
+  <div class="stat-item"><span class="stat-num">25</span> Geldings</div>
+  <div class="stat-item"><span class="stat-num">21</span> Mares</div>
+  <div class="stat-item"><span class="stat-num">1</span> Stallion</div>
+  <div class="stat-item"><span class="stat-num">2</span> Host Ranches</div>
+  <div class="stat-item"><span class="stat-num">11</span> Colors</div>
 </div>
 
 <!-- CONTROLS -->
@@ -618,7 +758,7 @@ body {
   </div>
 
   <div class="filter-section">
-    <span class="filter-label">Breed</span>
+    <span class="filter-label">Registration</span>
     <div class="filter-row" id="breedFilters"></div>
   </div>
 
@@ -634,7 +774,7 @@ body {
       <option value="lot-desc">Lot # (High → Low)</option>
       <option value="year-desc">Year (Newest)</option>
       <option value="year-asc">Year (Oldest)</option>
-      <option value="breed-asc">Breed (A–Z)</option>
+      <option value="breed-asc">Registration (A–Z)</option>
       <option value="color-asc">Color (A–Z)</option>
       <option value="name-asc">Registered Name (A–Z)</option>
       <option value="consignor-asc">Consignor (A–Z)</option>
@@ -646,7 +786,7 @@ body {
 <div class="active-filters" id="activeFilters"></div>
 
 <!-- RESULTS COUNT -->
-<div class="results-bar" id="resultsBar">Showing <strong>62</strong> of 62 lots</div>
+<div class="results-bar" id="resultsBar">Showing <strong>47</strong> of 47 lots</div>
 
 <!-- CATALOG GRID -->
 <div class="catalog-grid" id="catalogGrid"></div>
@@ -654,13 +794,138 @@ body {
 <!-- PRINT BUTTON -->
 <button class="print-btn" onclick="window.print()">🖨 Print Catalog</button>
 
+<!-- WELCOME NOTE -->
+<div class="info-section" id="welcome">
+  <div class="info-section-title">Welcome to the 11th Annual Legacy Ranch Horse Sale</div>
+  <div class="welcome-note">"As we gather for another year, we're reminded how grateful we are for the people and horses that have made this sale what it is today. What started as a production horse sale has grown into an event that celebrates not only our horses but our diverse operations that we are so very proud of. Because of the trust and support of our cowboys &amp; cowgirls, buyers, sponsors, and friends this event has truly become a highlight of our year.
+
+Each year we cherish seeing familiar faces while welcoming new friends and spending a great day showcasing our horses, employees and most importantly our culture. We are thrilled about this year's offering and the success stories that will follow as these horses move on with their new owners, but before all of that this is our moment to say Thank You for your interest in the horses and your support and respect of our Legacy!"</div>
+  <div class="welcome-sign">— The Kieckhefers</div>
+</div>
+
+<!-- SCHEDULE -->
+<div class="info-section" id="schedule">
+  <div class="info-section-title">Schedule</div>
+  <div class="info-section-sub">Prescott Rodeo Grounds · Prescott, Arizona</div>
+
+  <div class="info-card">
+    <h3>Friday, September 18, 2026</h3>
+    <div class="schedule-day">
+      <div class="schedule-item"><span class="ev">Sale Horses check in and numbered</span><span class="time">10:00 a.m.</span></div>
+      <div class="schedule-item"><span class="ev">2nd Annual Stray Gathering presented by PerforMix — long go</span><span class="time">10:00 a.m.</span></div>
+      <div class="schedule-item"><span class="ev">Olsens Events Barrel Race Series</span><span class="time">5:30 p.m.</span></div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Saturday, September 19, 2026</h3>
+    <div class="schedule-day">
+      <div class="schedule-item"><span class="ev">Equifest opens</span><span class="time">8:00 a.m.</span></div>
+      <div class="schedule-item"><span class="ev">Sale Office opens</span><span class="time">9:00 a.m.</span></div>
+      <div class="schedule-item"><span class="ev">Sale Horse Roping Demonstrations</span><span class="time">9:00 – 11:00 a.m.</span></div>
+      <div class="schedule-item"><span class="ev">Grand Entry &amp; National Anthem</span><span class="time">12:30 p.m.</span></div>
+      <div class="schedule-item"><span class="ev">Dry Work and Branding Demonstrations</span><span class="time">1:00 – 3:00 p.m.</span></div>
+      <div class="schedule-item"><span class="ev">Calf Scramble (12 and Under)</span><span class="time">4:15 p.m.</span></div>
+      <div class="schedule-item"><span class="ev">Match Calf Roping — Tuf Cooper vs. Hunter Herrin &amp; Top 8 Finals of Stray Gathering</span><span class="time">4:30 – 5:30 p.m.</span></div>
+      <div class="schedule-item"><span class="ev"><em>Legacy Ranch Horse Sale</em></span><span class="time">6:30 p.m.</span></div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Sale Contacts</h3>
+    <div class="contact-grid">
+      <div class="contact-item"><span class="role">Owner / Sale Manager</span>Sarah Kieckhefer — 928-925-8939</div>
+      <div class="contact-item"><span class="role">Sale Secretary</span>Carrie Gross — 602-510-4940</div>
+      <div class="contact-item"><span class="role">Office Manager</span>Dena Rodriguez — 928-899-7462</div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Sale Team</h3>
+    <div class="team-grid">
+      <div class="contact-item"><span class="role">Auctioneer</span>Rick Machado, Arroyo Grande, California</div>
+      <div class="contact-item"><span class="role">Pedigrees</span>Shane Hatch, Kirtland, New Mexico</div>
+      <div class="contact-item"><span class="role">Ringmen</span>Mark Holt, Scott Holt, Jim Settle</div>
+      <div class="contact-item"><span class="role">On-Site Vet</span>Copper Ridge Equine — 480-281-5682</div>
+      <div class="contact-item"><span class="role">Horse Hauler</span>Graceful Transportation — 480-769-2909</div>
+      <div class="contact-item"><span class="role">Photography / Videography</span>Cheryl Taylor – Lindsey Farrell Productions; Tori Carruth – TLMediaCo; Cree Futtrell – Pixelworkz Digital Photography</div>
+    </div>
+    <div style="margin-top:10px; font-size:0.8rem; color:var(--brown-light);">Cover artwork by Blu Dornan — the original painting will be awarded to the buyer of the high-selling horse.</div>
+  </div>
+</div>
+
+<!-- BIDDING INFO -->
+<div class="info-section" id="bidding">
+  <div class="info-section-title">Bidding Info</div>
+  <div class="info-section-sub">In person · Online via CCI.live · Phone / absentee</div>
+
+  <div class="info-card">
+    <h3>Payments Accepted</h3>
+    <div class="bidding-note">Cash, Credit Card (4% fee), or Personal Check with verified funds by Friday, September 18th. All accounts must be paid immediately following the sale, in US currency, on US banks only.</div>
+  </div>
+
+  <div class="info-card">
+    <h3>In House</h3>
+    <div class="bidding-note">
+      <ul>
+        <li>Signed Buyers Term and Agreement Form required.</li>
+        <li>If paying by personal check, a verified funds letter from your bank must be submitted to the secretary or emailed to <a class="footer-link" href="mailto:legacyhorsesale@icloud.com">legacyhorsesale@icloud.com</a>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Internet Bidding — Watch &amp; Bid on CCI.live</h3>
+    <div class="bidding-note">
+      <ul>
+        <li>Register at <a class="footer-link" href="https://www.cci.live" target="_blank">cci.live</a> to ensure a smooth, secure bidding experience.</li>
+        <li>As a buyer you do NOT need to log in to watch the sale, but you must have a validated account to bid.</li>
+        <li>To bid online: go to www.CCI.live in a modern browser → click the sale schedule page → click the sale of interest → click Bid Online, Register, then "Get Buyer Number."</li>
+        <li>Works on cellular device, laptop, desktop, or tablet — a current browser and stationary, healthy internet connection give the best experience.</li>
+        <li>Support line open during all sales: text 405-400-9505.</li>
+      </ul>
+      In partnership with Western Video Market.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h3>Phone Bidding</h3>
+    <div class="bidding-note">Complete the Phone/Absentee Bidding Form, and confirm your shipping address and the horses you wish to bid on with the sale secretary by 12:00 p.m. on September 19, 2026.</div>
+  </div>
+
+  <a class="terms-link-banner" href="terms.html">View full Conditions of Sale &amp; Buyer Notices →</a>
+</div>
+
+<!-- ABOUT THE RANCHES -->
+<div class="info-section" id="about">
+  <div class="info-section-title">About the Ranches</div>
+  <div class="info-section-sub">K4 Ranch &amp; Diamond A Ranch — the Kieckhefer family</div>
+
+  <div class="info-card history-card">
+    <h3>K4 Ranch</h3>
+    <p>The Kieckhefer family bought the K4 Ranch, 35 miles north of Prescott, in 1941 and will celebrate 85 years of ownership in 2026. Over the years the family has supplemented its holdings with property in California and southern Arizona. The cattle operations now total over 185,000 acres, running 3,000 mother cows.</p>
+    <p>Wanting to improve the quality of the K4 ranch horses, Robert (Bob) H. Kieckhefer began raising Quarter Horses in the 1940s, registering the first of them in 1943, just three years after the formation of the American Quarter Horse Association. K4 Ranch has consecutively registered horses for over 80 years with the AQHA. Bob was very active in AQHA, serving as president in 1976, and was inducted into its Hall of Fame in 1994.</p>
+    <p>One of the K4's early stallions was Hank Will, who went on to become Arizona's first AQHA Supreme Champion. Chuck Sheppard joined the K4 as manager in 1959 — a top hand, World Champion Team Roper, and Pro Rodeo Hall of Fame Inductee — and the Sheppard and Kieckhefer families merged when his daughter Lynda married Bob Kieckhefer's son John in 1970. In 1963 Chuck and John purchased the great stallion Driftwood Ike, who stood at the ranch for 17 years and had a tremendous influence on the breeding program; in 1997, Cee Booger Red breeding was introduced and has crossed very well on the Driftwood-bred mares.</p>
+    <p>K4 Ranch now runs 40 broodmares, with bloodlines including Driftwood Ike, Tuffy Ike, Orphan Drift, Drifts Vaquero, Ike's Last, Harlan, Oklahoma Star, Colonel Freckles, Cee Booger Red, Valiant Hero, and Sunfrost, with recent additions from the Waggoner Ranch and 6666 Ranch programs. In 2024 the AQHA recognized K4 Ranch as a Ranching Heritage Breeder. Today Rick and Sarah Kieckhefer manage the K4 horse program — Rick is a National Finals Rodeo qualifier in calf roping, and Sarah is a 24-time Turquoise Circuit qualifier in barrel racing.</p>
+  </div>
+
+  <div class="info-card history-card">
+    <h3>Diamond A Ranch</h3>
+    <p>The Diamond A Ranch, also known as The Big Boquillas, is the largest cattle ranch in Arizona. Owned by the Navajo Nation, the ranch covers 750,000 acres and stretches 75 miles from the town of Seligman to the South Rim of the Grand Canyon. In 1982 Harvey Dietrich and partner Richard Rudnick took over the Diamond A from Victorio Cattle Company, operating as Cholla Livestock; in 2018, at age 83, Dietrich took on a new partner — Rick Kieckhefer of the K4 Ranch. With Harvey's passing in 2020, his remaining interest was sold to the Kieckhefers, and his legacy continues today.</p>
+    <p>The ranch runs an extensive cattle operation of 6,000 mother cows, with ten full-time camp cowboys covering seven ranch camps. The size and remote locations of the pastures demand horses that are both athletic and tough — used to brand calves, gather cattle, sort in the corrals and outside, check fence, gather horses, halter break weanling foals, doctor cattle, and cover a lot of miles through all kinds of country.</p>
+    <p>The Diamond A currently runs a remuda of 75 working saddle horses, 35 broodmares, 6 stallions, and 35 young geldings and fillies, run outside in the same tough country they work in. Bloodlines include PopularResort Figure, Metallic Cat, Tanquery Gin, Doc O'Lena, Colonel Freckles, Peppy San Badger, Bueno Chex, Driftwood, Zan Parr Bar, PlayGun, Easy Jet, and Doc Tom Tucker.</p>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-title">Bridle &amp; Bit AI · Sales Catalog AI Agent</div>
-  <div class="footer-event">Art of the Cowgirl — Invitational Horse Sale</div>
-  <div class="footer-info">February 28, 2026 · Rancho Rio · Wickenburg, AZ</div>
-  <div class="footer-info">Official event info: <a class="footer-link" href="https://artofthecowgirl.com" target="_blank">artofthecowgirl.com</a></div>
-  <div class="footer-disclaimer">AI-generated content — subject to errors and omissions · Not affiliated with Art of the Cowgirl</div>
+  <div class="footer-event">11th Annual Legacy Ranch Horse Sale</div>
+  <div class="footer-info">Hosted by K4 Ranch &amp; Diamond A Ranch</div>
+  <div class="footer-info">Saturday, September 19, 2026 · Prescott Rodeo Grounds · Prescott, AZ</div>
+  <div class="footer-info">Official event info: <a class="footer-link" href="https://ranchhorsesale.com" target="_blank">ranchhorsesale.com</a> · Bid online at <a class="footer-link" href="https://www.cci.live" target="_blank">cci.live</a></div>
+  <div class="footer-info"><a class="footer-link" href="terms.html">Conditions of Sale &amp; Buyer Notices</a></div>
+  <div class="footer-disclaimer">AI-generated content — subject to errors and omissions · Not affiliated with the Legacy Ranch Horse Sale, K4 Ranch, or Diamond A Ranch</div>
 </footer>
 
 <script>
@@ -670,1057 +935,849 @@ body {
 const LOTS = [
   {
     "lot": 1,
-    "registered_name": "CASANOVAS DUALREYCAT",
-    "barn_name": "Casanovas Dualreycat",
-    "year": 2025,
-    "color": "\u2014",
+    "registered_name": "PRINCE OF PICA",
+    "barn_name": "Prince Of Pica",
+    "year": 2023,
+    "color": "Blue Roan",
     "breed": "AQHA",
-    "sex": "Filly",
-    "sire": "Metallic Casanova",
-    "dam": "Reynie Days",
-    "consignor": "Halee Staskivige",
-    "agent": "",
-    "phone": "218.368.6671",
-    "notes": "Proceeds towards Fellowship Program",
-    "description": "This 2025 AQHA filly by Metallic Casanova out of Reynie Days represents the next generation of cow horse breeding. As the youngest entry in the sale, she offers a buyer the rare opportunity to develop a prospect from the ground up with a pedigree stacked for cow sense and athleticism. Proceeds from her sale go towards the Art of the Cowgirl Fellowship Program, making this purchase both an investment and a contribution to the future of cowgirl culture.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-1/public"
+    "registration": "AQHA Reg.",
+    "sex": "Stallion",
+    "sire": "Booger Sharp Dressin",
+    "sire_detail": "Booger Sharp Dressin (Bestcreditmesunfrost (Sun Frost x Nonstopwithcredit) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "Saltys Reba",
+    "dam_detail": "Saltys Reba (Salty Blue Hancock (Mr Roan Hancock x Tigress Bar Leo 78) x Lucks Reba (Luck Breeze x Belles Sugar 81))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "This eye catching blue roan stud is the kind that turns heads everywhere he goes. Built right with good bone, good feet, and the mind to match, he has all the ingredients to make a top-notch ranch and performance horse. Gentle, very trainable, and exceptionally willing, he's been a pleasure to work with from day one. He's stout to the horn, has a big stop and carries himself with confidence while still being easy to get along with. He handles new jobs with a willing attitude and plenty of try. With his athleticism, disposition, and foundation this colt has a bright future in the roping pen, on the ranch or wherever you choose to take him.",
+    "image": "images/lot-01.jpg"
   },
   {
     "lot": 2,
-    "registered_name": "HR PROFITS AJAX",
-    "barn_name": "Profit",
-    "year": 2019,
-    "color": "Buckskin",
+    "registered_name": "FAMOUS IN THE MOONLIGHT",
+    "barn_name": "Morris",
+    "year": 2021,
+    "color": "Bay",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Profit Power",
-    "dam": "Cookin Leah Lynx",
-    "consignor": "Lynch Performance, LLC",
-    "agent": "",
-    "phone": "605.777.5883",
+    "sire": "Figure Me Famous",
+    "sire_detail": "Figure Me Famous (Popular Resortfigure (Dual Pep x Bar J Jackie) x Step By Jody (Heza Step By Step x Sorrel Star Jody))",
+    "dam": "Moonlight Walkharlan",
+    "dam_detail": "Moonlight Walkharlan (Harlans Tuff VooDoo (Tuffy Ike x Troggies Harlander) x Drifts Moon (Drifts Vaquero x Shanta Bee 03))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Profit is a 2019 buckskin AQHA gelding by Profit Power and out of Cookin Leah Lynx. At seven years old, he's in the prime of his working years with the kind of breeding that points to natural cow ability and trainability. His buckskin color and solid build make him as eye-catching in the pen as he is in the pasture. Consigned by Lynch Performance, LLC, a program known for developing quality using horses.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-2/public"
+    "description": "Morris is a steady, gentle ranch horse, good for riders of any level. He moves calmly, handles gathering, sorting, tight pens, and long days, and stays reliable under pressure. Well-trained and sensible, he responds to cues and performs consistently—a trustworthy mount for beginners or experienced riders. He's already been shown at some AQHA shows in the heading, heeling and steer stopping and he is ready to pursue more! Royal Crown eligible in the roping, he can continue to be showcased for years to come!",
+    "image": "images/lot-02.jpg"
   },
   {
     "lot": 3,
-    "registered_name": "BOONE",
-    "barn_name": "Boone",
-    "year": 2017,
-    "color": "Red Roan",
-    "breed": "Pony",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Grace Lynn Ratliff",
-    "agent": "",
-    "phone": "817.907.5877",
+    "registered_name": "FLAMIN RED GUNZ",
+    "barn_name": "Flamin Red Gunz",
+    "year": 2022,
+    "color": "Sorrel",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Ron Burgandy Buckles",
+    "sire_detail": "Ron Burgandy Buckles (Buckle Up Jet (Bambino Jet x Manorcliffe) x Zan Belle (Zans Last Parr x Aggie Belle))",
+    "dam": "Chollas Smart Gun",
+    "dam_detail": "Chollas Smart Gun (Gunshy 00 (Joe Derringer x Miss Tucker Smoke) x Fairlea Dun Datin (Smart Steady Date x Fairlea Lady Glory))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Boone is a 2017 red roan pony gelding with the kind of gentle, been-there-done-that temperament that makes him worth his weight in gold. At nine years old, he's a seasoned partner for young riders looking for a confidence builder. His compact frame, quiet disposition, and flashy roan coloring make him the total package for a family looking to get their kids started right.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-3/public"
+    "description": "This fun mare has been used a lot in the wheat fields in Texas, doctoring and sorting cattle. This spring she has also had some big calves drug on her and been used on some long cattle drives. She is ready for the next step into the arena now. Correct conformation makes her an excellent broodmare prospect also.",
+    "image": "images/lot-03.jpg"
   },
   {
     "lot": 4,
-    "registered_name": "JAKES SMOKINLILANGEL",
-    "barn_name": "Angel",
-    "year": 2016,
-    "color": "Palomino",
+    "registered_name": "RAZZLE POP ROCKS",
+    "barn_name": "Bow Tie",
+    "year": 2021,
+    "color": "Gray",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Smokin Jake",
-    "dam": "Peppy Watch Josie",
-    "consignor": "Alise Holst - Triple T Livestock",
-    "agent": "",
-    "phone": "507.951.7880",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "KR Rock Candy",
+    "sire_detail": "KR Rock Candy (Kit Eat Sugar (High Brow Cat x Sugar N Dulce) x Araceli Dual (Dual Pep x Smart Little Betsy))",
+    "dam": "Razzle Dazzle Fiesta",
+    "dam_detail": "Razzle Dazzle Fiesta (Fiesta Royale (Royal Shake Em x Firewater Fiesta) x Annie Be Lonely (Ikes Last x Moonanna))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Angel is a 2016 palomino AQHA mare by Smokin Jake and out of Peppy Watch Josie. At ten years old, she brings maturity and experience to the table with a pedigree loaded with cow horse royalty. Her golden palomino coat catches every eye in the arena, and her Smokin Jake and Peppy breeding gives her the foundation for ranch work, roping, and all-around versatility.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-4/public"
+    "description": "Bow Tie comes from a long line of proven winners and is already proving he's no exception. In his short arena career, he has earned champion heading and heeling buckles, alongside an AQHA Ranching Heritage Open Heading championship. Built exactly like a performance horse should be, Bow Tie runs hard, stops hard, scores like a veteran, and absolutely loves his job. Whether you're backing into the box or saddling him for a day on the ranch, he gives you everything he's got. He's the kind that can ranch all day, rope all night, and do it again tomorrow. Honest, gritty, and dependable, Bow Tie possesses the heart, athleticism, and mind to compete at a high level while remaining a horse you truly enjoy riding every day.",
+    "image": "images/lot-04.jpg"
   },
   {
     "lot": 5,
-    "registered_name": "CU ELEANOR FROST",
-    "barn_name": "Caramilk",
-    "year": 2019,
-    "color": "Buckskin",
+    "registered_name": "BOOGERS CARMEL CAKE",
+    "barn_name": "Carmel",
+    "year": 2024,
+    "color": "Buckskin Roan",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "PC Bar Dox Frost",
-    "dam": "Eleanor Joe",
-    "consignor": "Shayna Jones",
-    "agent": "",
-    "phone": "403.625.7014",
+    "sire": "Hughes That Booger",
+    "sire_detail": "Hughes That Booger (Thomas E Hughes (High Brow Cat x Smart Letha) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "Coke On Ike",
+    "dam_detail": "Coke On Ike (Call Me Ike (Orphan Drift x Blutch's Katy) x Osage Jack Bar (Zan Parr Jack x Miss Osage Sue 82))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Caramilk is a 2019 buckskin AQHA mare by PC Bar Dox Frost out of Eleanor Joe. She combines the proven cutting and cow horse genetics of PC Bar Dox Frost with a beautiful buckskin package. At seven years old, she's entering her prime with the kind of breeding that makes her equally valuable as a using horse or future broodmare prospect. Consigned from Shayna Jones in Alberta, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-5/public"
+    "description": "Carmel a gorgeous buckskin roan filly with the disposition and athletic ability to go any direction. She is started right and progressing nicely, Carmel has the kind of eye everyone looks for and lopes collected circles with the look of a future show horse. Backed by a strong pedigree, she has all the ingredients to excel as a rope or performance horse. Easy to saddle, bathe and haul, Carmel travels confidently on the trails and has dragged logs and worked the cutting flag, giving her a solid, versatile foundation.",
+    "image": "images/lot-05.jpg"
   },
   {
     "lot": 6,
-    "registered_name": "PAYS TO BE SPIFFY",
-    "barn_name": "Spiffy",
-    "year": 2018,
-    "color": "Bay",
+    "registered_name": "FSF ONCEINABLUMOON",
+    "barn_name": "FSF Onceinablumoon",
+    "year": 2020,
+    "color": "Blue Roan",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Irish Pay",
-    "dam": "French Fancy Face",
-    "consignor": "TK Sampson",
-    "agent": "Brooke Curuchet, Agent",
-    "phone": "605.569.6217",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Fast Steppin Fiesta",
+    "sire_detail": "Fast Steppin Fiesta (Fiesta Royale (Royal Shake Em x Firewater Fiesta) x Step By Jody (Heza Step By Step x Sorrel Star Jody))",
+    "dam": "Boogers El Fuego",
+    "dam_detail": "Boogers El Fuego (Popular Resortfigure (Dual Pep x Bar J Jackie) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Spiffy is a 2018 bay AQHA mare by Irish Pay out of French Fancy Face. Her Irish Pay sire line brings proven versatility and her dam's breeding adds style and refinement. At eight years old, she's a solid, seasoned mare with the kind of breeding that appeals to both performance and ranch buyers. Consigned by TK Sampson with Brooke Curuchet as agent.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-6/public"
+    "description": "The potential for this horse can not be stopped and every day he is better than the day before. A solid ranch horse by day and a super star in the arena, he is destined to be great. Royal Crown eligible, he can go to the roping events or a Ranching Heritage horse show, he's ready for it all. He's already been shown at AQHA shows and hauled to jackpots.",
+    "image": "images/lot-06.jpg"
   },
   {
     "lot": 7,
-    "registered_name": "VORTEX",
-    "barn_name": "Phoenix",
-    "year": 2020,
-    "color": "Red Roan",
+    "registered_name": "STYLIN SPECIALISH",
+    "barn_name": "Honey",
+    "year": 2021,
+    "color": "Sorrel",
     "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Hashtags",
-    "dam": "Shes Full Of Hope",
-    "consignor": "Turner Performance Horses",
-    "agent": "",
-    "phone": "406.381.2347",
-    "notes": "",
-    "description": "Phoenix is a 2020 red roan AQHA gelding by Hashtags out of Shes Full Of Hope. At six years old, he's young enough to have years of riding ahead and mature enough to handle a job. His red roan coloring is always a crowd favorite, and his Hashtags breeding brings modern performance genetics to the table. Consigned by Turner Performance Horses out of Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-7/public"
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Stylish Bunny",
+    "sire_detail": "Stylish Bunny (Stylish Rey (Dual Pep x Nurse Rey) x Ms Becaco Echoflo (Docs Stylish Oak x Play Lena))",
+    "dam": "Specialish",
+    "dam_detail": "Specialish (Hottish (Spots Hot x Stylish Play Lena) x Our Special Kitten (High Brow Cat x Boonsmal Doctress))",
+    "consignor": "K4 Ranch",
+    "notes": "In foal to Trixxster (2027 foal)",
+    "description": "In your pocket type personality with cow sense athleticism paired with her carrying a foal by Trixxster, Honey is sure to fit any family! She's got so much potential as either a performance horse after she foals in 2027 or keep breeding her with that fantastic pedigree she packs. She has done every job on the ranch, has been hauled out of state to gather cattle and gets along well with other horses.",
+    "image": "images/lot-07.jpg"
   },
   {
     "lot": 8,
-    "registered_name": "TOPO CHICO",
-    "barn_name": "Topo Chico",
-    "year": 2018,
-    "color": "Buckskin",
-    "breed": "Paint Pony",
+    "registered_name": "DRIFTIN GUITAR HERO",
+    "barn_name": "Driftin Guitar Hero",
+    "year": 2022,
+    "color": "Black",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Haddie Clark",
-    "agent": "",
-    "phone": "307.752.7987",
+    "sire": "BF Heros Legacy",
+    "sire_detail": "BF Heros Legacy (Valiant Hero (First Down Dash x Corona Chick) x Royalclassic Express (A Classic Dash x Ettagos Express))",
+    "dam": "Driftin Strawberry",
+    "dam_detail": "Driftin Strawberry (Drifts Vaquero (Orphan Drift x Katy Was A Lady) x Boogers Little Rose (Cee Booger Red x Brian's Beta))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Topo Chico is a 2018 buckskin paint pony gelding with the kind of charm and versatility that makes ponies the unsung heroes of the horse world. At eight years old, he's proven, steady, and flashy with his buckskin coloring. Whether it's ranch chores, trail riding, or giving a young rider the ride of their life, Topo Chico delivers with style.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-8/public"
+    "description": "This 5-year-old gelding is the kind you can count on for any job, big or small. Calm-minded, friendly and loaded with natural ability, he has gathered cattle, sorted pens, drug calves and loaded trucks. He covers country with a smooth trot and carries himself with athleticism in or out of the arena. A natural in the heading and heeling, he finds the right spot and gives you an honest shot. Quiet under pressure and willing to adjust to his rider, he has the talent and disposition to excel at any level.",
+    "image": "images/lot-08.jpg"
   },
   {
     "lot": 9,
-    "registered_name": "RUDY",
-    "barn_name": "Rudy",
-    "year": 2020,
-    "color": "Sorrel & White",
-    "breed": "Grade Paint",
+    "registered_name": "KOLDPEP",
+    "barn_name": "Koldpep",
+    "year": 2015,
+    "color": "Palomino",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "John & Allison Wollenburg",
-    "agent": "Hannah Anderson, Agent",
-    "phone": "406.850.0689",
-    "notes": "",
-    "description": "Rudy is a 2020 sorrel and white grade paint gelding consigned by John and Allison Wollenburg with Hannah Anderson as agent. His bold paint markings make him impossible to miss, and at six years old he's got plenty of years to be someone's go-to partner. Grade horses often surprise people with their heart and willingness, and Rudy's flashy look is just the bonus on top.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-9/public"
+    "sire": "Koldplay",
+    "sire_detail": "Koldplay (Shining Spark (Genuine Doc x Dimmonds Sparkle) x Meradas Kitty Rey (Freckles Merada x Watch Me Kitty))",
+    "dam": "Alazulenas Pep",
+    "dam_detail": "Alazulenas Pep (Dual Pep (Peppy San Badger x Miss Dual Doc) x Alazulena (Doc O'Lena x Lady Cutter))",
+    "consignor": "Consigned by Johnny Miller",
+    "notes": "Ranch Employee Consignment",
+    "description": "Easy on the eyes and sized right, this palomino gelding has checked all the boxes for a good ranch horse. He has been roped on outside, drug calves to the fire and has also been shown some. By September he will be patterned in the team roping and ready for anyone looking for a solid gelding.",
+    "image": "images/lot-09.jpg"
   },
   {
     "lot": 10,
-    "registered_name": "DALLY",
-    "barn_name": "Dally",
-    "year": 2019,
-    "color": "Sorrel",
-    "breed": "Paint Pony",
+    "registered_name": "BOQUILLAS PHOENIX",
+    "barn_name": "Boquillas Phoenix",
+    "year": 2022,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "",
-    "dam": "",
-    "consignor": "Steele Black",
-    "agent": "",
-    "phone": "254.396.2625",
-    "notes": "",
-    "description": "Dally is a 2019 sorrel paint pony mare with the kind of versatility that small-but-mighty ponies are famous for. At seven years old, she's right in her working prime and ready for whatever job comes her way. Her sorrel and white coloring gives her that classic paint look in a compact, manageable frame. Consigned by Steele Black out of Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-10/public"
+    "sire": "BB Doctor My Heart",
+    "sire_detail": "BB Doctor My Heart (Stoli My Heart (Stoli x Streakin To Music) x DKW Sandi (Doctor King Wood x Ms Fork Fifty-Two))",
+    "dam": "Cibolas Echo",
+    "dam_detail": "Cibolas Echo (CD Starbert Jodie (Bayou Bert x Oleo Ginger Snap 77) x Jakes Blue Roan (LX Black Bee x Miss Roxie Queen 22))",
+    "consignor": "Consigned by Jake McCorkell",
+    "notes": "Ranch Employee Consignment",
+    "description": "This talented young mare has been used in every aspect of ranch work, including gathering, sorting, branding, and roping outside. She is well started in the arena and has the foundation, athletic ability, and a willing mind to go on in any direction. She is also being used as a pickup horse at local rodeos, where her speed, quick feet, and confidence really stand out. Versatile, capable, and ready for her next job, she is the kind of mare that will be an asset on the ranch, in the arena, or behind the bucking chutes.",
+    "image": "images/lot-10.jpg"
   },
   {
     "lot": 11,
-    "registered_name": "ELANS SMART TREASURE",
-    "barn_name": "Elana",
-    "year": 2020,
-    "color": "Red Roan",
+    "registered_name": "GB AZUL",
+    "barn_name": "Blueberry",
+    "year": 2012,
+    "color": "Blue Roan",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "Elans Legacy",
-    "dam": "Missys Smart Pep",
-    "consignor": "Austee VonAhn",
-    "agent": "",
-    "phone": "573.406.8471",
+    "sire": "Chapo Wood",
+    "sire_detail": "Chapo Wood (Call Me Ike (Orphan Drift x Blutch's Katy) x Jolees Bar (Bar Adams x Wee Raffles))",
+    "dam": "GB Miss Blue Wood",
+    "dam_detail": "GB Miss Blue Wood (My Blue Warrior (Happy's Warrior x Setumup Miss 66) x GB Meleo Wood (Jae Bar Meleo x Tiny Wood))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Elana is a 2020 red roan AQHA mare by Elans Legacy out of Missys Smart Pep. Her pedigree is loaded with cow horse talent \u2014 Elans Legacy brings proven cutting genetics and Missys Smart Pep adds Smart Little Lena influence. At six years old, she's young, athletic, and bred to work cattle. Her red roan color adds flash to an already impressive package.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-11/public"
+    "description": "If you are looking for GENTLE, here she is! Blueberry is a horse anyone in the family can ride, whether it's for a trail ride, heading steers or calf roping she has done it all! We bred her for several years and she came up open this year so we decided to leg her back up! She is a big, stout mare that doesn't feel like it when she travels or runs to cattle. Currently she is getting back to work in the calf roping and hasn't missed a beat but is also a joy to ride outside for a nice trail ride.",
+    "image": "images/lot-11.jpg"
   },
   {
     "lot": 12,
-    "registered_name": "DRAMATIC MOTIONS",
-    "barn_name": "Tempo",
-    "year": 2022,
-    "color": "Bay",
+    "registered_name": "SUNFLOWER MISTY",
+    "barn_name": "Sunflower",
+    "year": 2024,
+    "color": "Palomino",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "Wright On Black",
-    "dam": "No Drama Here",
-    "consignor": "The Stock Ranch",
-    "agent": "",
-    "phone": "406.312.3367",
+    "sire": "Chollas Good Gin",
+    "sire_detail": "Chollas Good Gin (Pauls Good N Red (Naturally San x Pauls Dee Dee 83) x Chollas Salty Lady (Saltys Willie x Hopi Ladys Guard))",
+    "dam": "Starbert Cat Misty",
+    "dam_detail": "Starbert Cat Misty (Little Olena Hydrive (Hydrive Cat x Little Olena) x Starbert F Jake (Starbert Fisher x Starbert Leo Girl))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Tempo is a 2022 bay AQHA mare by Wright On Black out of No Drama Here. As one of the younger entries in the sale at four years old, she represents an exciting prospect with serious upside. Wright On Black brings cow horse breeding and her dam name says it all \u2014 No Drama Here. Consigned by The Stock Ranch out of Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-12/public"
+    "description": "Sunflower is a powerhouse in a pint sized frame. Not only is she stunning but she's capable. This filly has a big stop and to say she's “cowy” is an understatement. She has a very serious disposition and enough grit to help you take her to the next level, whether that's making a heel horse, a breakaway horse or just an all-around ranch horse.",
+    "image": "images/lot-12.jpg"
   },
   {
     "lot": 13,
-    "registered_name": "KNOTMYBESTDECISION",
-    "barn_name": "Hank",
-    "year": 2019,
-    "color": "Red Roan",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Expert Decision",
-    "dam": "Katie Ty The Knot",
-    "consignor": "Dani Dowton",
-    "agent": "",
-    "phone": "406.396.8199",
-    "notes": "",
-    "description": "Hank is a 2019 red roan AQHA gelding by Expert Decision out of Katie Ty The Knot. His Expert Decision breeding brings proven reined cow horse talent, and at seven years old he's in the sweet spot of maturity and years ahead. Red roan geldings with this kind of pedigree are exactly what the modern cowgirl is looking for. Consigned by Dani Dowton from Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-13/public"
-  },
-  {
-    "lot": 14,
-    "registered_name": "RUBY HUGH",
-    "barn_name": "Ruby",
-    "year": 2022,
-    "color": "Red Roan",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Metallic Al",
-    "dam": "Hugh Betcha",
-    "consignor": "Morgan Cromer Cutting Horses",
-    "agent": "",
-    "phone": "918.760.9851",
-    "notes": "",
-    "description": "Ruby is a 2022 red roan AQHA mare by Metallic Al out of Hugh Betcha. The Metallic Al sire line is one of the hottest in the cutting and cow horse industry, and at four years old Ruby is a prospect with sky-high potential. Her red roan coloring and royal pedigree make her a standout for anyone looking to invest in the future. Consigned by Morgan Cromer Cutting Horses.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-14/public"
-  },
-  {
-    "lot": 15,
-    "registered_name": "ONE FINE GYRL",
-    "barn_name": "Cowgirl",
-    "year": 2019,
-    "color": "Sorrel",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "One Fine Vintage",
-    "dam": "Shortys Geisha Girl",
-    "consignor": "Quentin Hall Horses",
-    "agent": "Ali Bilkey, Agent",
-    "phone": "308.520.3939",
-    "notes": "",
-    "description": "Cowgirl is a 2019 sorrel AQHA mare by One Fine Vintage out of Shortys Geisha Girl. Her breeding combines ranch horse versatility with cow sense, and at seven years old she's seasoned enough to handle a full day's work. Consigned by Quentin Hall Horses with Ali Bilkey as agent, she's the kind of honest mare that makes a cowgirl's job easier every single day.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-15/public"
-  },
-  {
-    "lot": 16,
-    "registered_name": "BILLY BAY BUSTER",
-    "barn_name": "Drako",
-    "year": 2018,
-    "color": "Bay",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Jorge Dericho",
-    "dam": "One Small Freckle",
-    "consignor": "Katie Marshall",
-    "agent": "",
-    "phone": "530.227.1164",
-    "notes": "",
-    "description": "Drako is a 2018 bay AQHA gelding by Jorge Dericho out of One Small Freckle. At eight years old, he's a mature, solid gelding with the kind of build and breeding that says all-around ranch horse. His bay coat and strong frame make him built for a day's work, and his Freckle breeding on the dam side adds proven performance genetics. Consigned by Katie Marshall from California.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-16/public"
-  },
-  {
-    "lot": 17,
-    "registered_name": "PRETTY AFTERBOON",
-    "barn_name": "Baywatch",
-    "year": 2020,
-    "color": "Bay",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Pretty Boy Boon",
-    "dam": "Ms Anelo",
-    "consignor": "Heidi Kinghorn",
-    "agent": "",
-    "phone": "208.681.3002",
-    "notes": "",
-    "description": "Baywatch is a 2020 bay AQHA mare by Pretty Boy Boon out of Ms Anelo. The Pretty Boy Boon sire line carries Boon Bar and Doc O'Lena influence, giving Baywatch a pedigree built for cow work. At six years old, she's athletic and ready to take on cutting, ranch work, or broodmare duties down the road. Consigned by Heidi Kinghorn out of Idaho.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-17/public"
-  },
-  {
-    "lot": 18,
-    "registered_name": "SR FLETCH THAT BOON",
-    "barn_name": "Titos",
-    "year": 2018,
-    "color": "Sorrel",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Fletch That Cat",
-    "dam": "MH Boon In Me",
-    "consignor": "Kylie McLean",
-    "agent": "",
-    "phone": "480.278.0079",
-    "notes": "",
-    "description": "Titos is a 2018 sorrel AQHA gelding by Fletch That Cat out of MH Boon In Me. Cat and Boon breeding on both sides of his papers means this horse was born to work a cow. At eight years old, he's experienced and dependable \u2014 the kind of gelding that becomes your number-one pick every morning. Consigned by Kylie McLean, local to the Wickenburg area.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-18/public"
-  },
-  {
-    "lot": 19,
-    "registered_name": "COOKIE",
-    "barn_name": "Cookie",
-    "year": 2017,
-    "color": "Grulla",
-    "breed": "Pony",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Saylor McPhail",
-    "agent": "SKC Pony Collection",
-    "phone": "806.282.7093",
-    "notes": "",
-    "description": "Cookie is a 2017 grulla pony gelding with one of the most sought-after colors in the horse world. That smoky grulla coloring is rare and beautiful, and at nine years old Cookie has the miles and experience to be a steady, reliable partner. Part of the SKC Pony Collection, he's the kind of pony that kids fight over and adults secretly want to ride too.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-1/public"
-  },
-  {
-    "lot": 20,
-    "registered_name": "PEPTOS TEXAS DOLL",
-    "barn_name": "Dolly",
-    "year": 2018,
-    "color": "Sorrel",
-    "breed": "Quarter Pony",
-    "sex": "Mare",
-    "sire": "Texas Red Sands",
-    "dam": "High Water Flow",
-    "consignor": "Rio Painter",
-    "agent": "",
-    "phone": "541.518.0983",
-    "notes": "",
-    "description": "Dolly is a 2018 sorrel quarter pony mare by Texas Red Sands out of High Water Flow. She combines the heart of a quarter horse with the manageable size of a pony, making her ideal for younger or smaller riders who still want performance and cow sense. At eight years old, she's seasoned and sensible. Consigned by Rio Painter from Oregon.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-2/public"
-  },
-  {
-    "lot": 21,
-    "registered_name": "SIXES BOSS",
-    "barn_name": "Cali Roll",
-    "year": 2021,
-    "color": "Palomino",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Sushi Boss",
-    "dam": "Sixes Stylish",
-    "consignor": "Ada Allen",
-    "agent": "",
-    "phone": "402.575.8291",
-    "notes": "",
-    "description": "Cali Roll is a 2021 palomino AQHA gelding by Sushi Boss out of Sixes Stylish. At five years old, he's young and flashy with a golden palomino coat that turns heads. His Sushi Boss breeding is modern and performance-oriented, and Sixes Stylish on the bottom side adds ranch horse depth. A gelding with this color and breeding won't last long. Consigned by Ada Allen from Nebraska.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-3/public"
-  },
-  {
-    "lot": 22,
-    "registered_name": "SLR CALL ME THE BOON",
-    "barn_name": "Rue",
-    "year": 2020,
-    "color": "Red Roan",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Call Me Mitch",
-    "dam": "SLR Stylish Boon",
-    "consignor": "Katie Bews",
-    "agent": "",
-    "phone": "806.760.1583",
-    "notes": "",
-    "description": "Rue is a 2020 red roan AQHA mare by Call Me Mitch out of SLR Stylish Boon. Her pedigree reads like a who's who of cow horse breeding with Dual Smart Rey, Stylish, and Peptoboonsmal influence. At six years old, she's an athletic mare in her prime with the breeding to be a top performer or an elite broodmare. Consigned by Katie Bews from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-4/public"
-  },
-  {
-    "lot": 23,
-    "registered_name": "SKIPPEN DISCO BEATZ",
-    "barn_name": "DJ",
-    "year": 2017,
-    "color": "Grey",
-    "breed": "APHA",
-    "sex": "Gelding",
-    "sire": "Poco Diego",
-    "dam": "Skippers River Girl",
-    "consignor": "Hailey Prest",
-    "agent": "",
-    "phone": "778.242.4482",
-    "notes": "",
-    "description": "DJ is a 2017 grey APHA gelding by Poco Diego out of Skippers River Girl. His paint breeding and striking grey coat give him a distinctive look, and at nine years old he's a been-there-done-that kind of horse. The Poco and Skipper W breeding on his papers speaks to old-school ranch horse versatility. Consigned by Hailey Prest from British Columbia, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-5/public"
-  },
-  {
-    "lot": 24,
-    "registered_name": "HES LIKE TEXAS",
-    "barn_name": "Tex",
-    "year": 2018,
-    "color": "Red Roan",
-    "breed": "AQHA/APHA",
-    "sex": "Gelding",
-    "sire": "Bet Hesa Cat",
-    "dam": "Maras Little Angel",
-    "consignor": "Kelsey Love Thomas",
-    "agent": "",
-    "phone": "325.998.2085",
-    "notes": "",
-    "description": "Tex is a 2018 red roan AQHA/APHA dual-registered gelding by Bet Hesa Cat out of Maras Little Angel. Dual registration means double the versatility, and his Bet Hesa Cat sire line brings High Brow Cat cutting genetics. At eight years old, he's experienced and flashy in that red roan coat. Consigned by Kelsey Love Thomas from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-6/public"
-  },
-  {
-    "lot": 25,
-    "registered_name": "ZORRO",
-    "barn_name": "Zorro",
-    "year": 2011,
-    "color": "\u2014",
-    "breed": "Pony",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Jessa Wilson",
-    "agent": "Cayhill Sharon, Agent",
-    "phone": "719.468.8716",
-    "notes": "",
-    "description": "Zorro is a 2011 pony gelding with fifteen years of experience under his belt. When you're looking for a pony that's seen it all and done it all, age is an asset \u2014 and Zorro has been there for every trail ride, every lesson, and every adventure. Consigned by Jessa Wilson with Cayhill Sharon as agent, he's the ultimate confidence-building partner from Colorado.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-7/public"
-  },
-  {
-    "lot": 26,
-    "registered_name": "SHL GORONWY BY CASS",
-    "barn_name": "Angus",
-    "year": 2022,
-    "color": "Black",
-    "breed": "Gypsy Vanner",
-    "sex": "Gelding",
-    "sire": "HSF Casanova",
-    "dam": "Triple R Ranch's Gentry",
-    "consignor": "Caydee Huwa, Agent",
-    "agent": "",
-    "phone": "406.570.2051",
-    "notes": "",
-    "description": "Angus is a 2022 black Gypsy Vanner gelding by HSF Casanova out of Triple R Ranch's Gentry. Gypsy Vanners bring a unique combination of beauty, bone, and temperament to any program, and Angus is no exception. At four years old with that striking solid black coat and feathered legs, he's a young prospect with the presence to stop traffic. Consigned by Caydee Huwa as agent from Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-8/public"
-  },
-  {
-    "lot": 27,
-    "registered_name": "GIVE ME THE SHIVERS",
-    "barn_name": "Shivers",
-    "year": 2022,
-    "color": "Black",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "A Vintage Smoke",
-    "dam": "Dillons Skarlet Chic",
-    "consignor": "Lynch Performance LLC",
-    "agent": "",
-    "phone": "605.777.5883",
-    "notes": "",
-    "description": "Shivers is a 2022 black AQHA mare by A Vintage Smoke out of Dillons Skarlet Chic. At four years old, she's a young prospect with a sleek black coat and modern cow horse pedigree. A Vintage Smoke brings cutting genetics and her dam side adds depth. As a young mare, she has value both as a performance prospect and future broodmare. Consigned by Lynch Performance LLC.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-9/public"
-  },
-  {
-    "lot": 28,
-    "registered_name": "GO FOR DIAMONDZ",
-    "barn_name": "Shaggy",
-    "year": 2022,
-    "color": "Bay",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "SJR Diamond Mist",
-    "dam": "Arc Its Go Time",
-    "consignor": "Morgan Holmes",
-    "agent": "",
-    "phone": "941.961.8376",
-    "notes": "",
-    "description": "Shaggy is a 2022 bay AQHA gelding by SJR Diamond Mist out of Arc Its Go Time. At four years old, he's one of the youngest geldings in the sale with a lifetime of potential ahead. His pedigree combines Diamond and Arc breeding for a well-rounded performance prospect. Consigned by Morgan Holmes from Florida, bringing a different flavor to this Western sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-19/public"
-  },
-  {
-    "lot": 29,
-    "registered_name": "CS SANDCASTLE",
-    "barn_name": "Sandy",
-    "year": 2018,
-    "color": "Buckskin",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "CR Snowman",
-    "dam": "BHR Julia Ward Howe",
-    "consignor": "Shelby Wieghat",
-    "agent": "",
-    "phone": "507.993.6671",
-    "notes": "",
-    "description": "Sandy is a 2018 buckskin AQHA mare by CR Snowman out of BHR Julia Ward Howe. That buckskin color paired with AQHA papers makes Sandy a head-turner with substance behind the looks. At eight years old, she's experienced and in her prime working years. Her Snowman breeding adds ranch versatility and her confirmation backs up her pedigree. Consigned by Shelby Wieghat from Minnesota.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-20/public"
-  },
-  {
-    "lot": 30,
-    "registered_name": "MY STYLISH QUIXOTE",
-    "barn_name": "Bunny",
-    "year": 2022,
-    "color": "Brown",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "ImaroyalSmartQuixote",
-    "dam": "My Stylish Cat",
-    "consignor": "Colee Charlesworth",
-    "agent": "",
-    "phone": "432.294.0831",
-    "notes": "",
-    "description": "Bunny is a 2022 brown AQHA mare by ImaroyalSmartQuixote out of My Stylish Cat. This pedigree is elite \u2014 Smart Quixote and Stylish Cat breeding puts Bunny squarely in cow horse royalty. At four years old, she's a prospect with enormous upside as both a performance horse and broodmare. That kind of pedigree on a young mare is hard to find. Consigned by Colee Charlesworth from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-21/public"
-  },
-  {
-    "lot": 31,
-    "registered_name": "ZIPPEN ON STARS",
-    "barn_name": "Bubblegum",
-    "year": 2015,
-    "color": "Sorrel",
-    "breed": "Appaloosa",
-    "sex": "Gelding",
-    "sire": "My Lucky Zipper",
-    "dam": "Someone Else's Star",
-    "consignor": "Shelby Black",
-    "agent": "",
-    "phone": "254.396.2625",
-    "notes": "",
-    "description": "Bubblegum is a 2015 sorrel Appaloosa gelding by My Lucky Zipper out of Someone Else's Star. At eleven years old, he's a seasoned, reliable partner with that eye-catching Appaloosa pattern that sets him apart from every other horse in the arena. Appaloosas bring toughness, heart, and personality, and Bubblegum has all three. Consigned by Shelby Black from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-22/public"
-  },
-  {
-    "lot": 32,
-    "registered_name": "KMR ROYAL BLUE CAT",
-    "barn_name": "JLo",
+    "registered_name": "CHERRY TART BOOGER",
+    "barn_name": "Waddie",
     "year": 2022,
     "color": "Chestnut",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "High Brow Dualin",
-    "dam": "MS Halcyon Days",
-    "consignor": "Billadeau Quarter Horses",
-    "agent": "Josie Pereira, Agent",
-    "phone": "805.235.4591",
+    "sire": "Booger Sharp Dressin",
+    "sire_detail": "Booger Sharp Dressin (Bestcreditmesunfrost (Sun Frost x Nonstopwithcredit) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "CB Kinda A Big Deal",
+    "dam_detail": "CB Kinda A Big Deal (Boogers Cee Bar (Cee Booger Red x Troggies Harlander) x Step By Jody (Heza Step By Step x Sorrel Star Jody))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "JLo is a 2022 chestnut AQHA mare by High Brow Dualin out of MS Halcyon Days. High Brow Dualin carries the legendary High Brow Cat bloodline, making JLo a serious cutting and cow horse prospect. At four years old, she's young and full of potential with elite genetics backing her up. Consigned by Billadeau Quarter Horses with Josie Pereira as agent from California.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-23/public"
+    "description": "Waddie is a big, stout mare with exceptional presence, talent and dependability. Proven through every aspect of ranch work, she has ponied yearlings, gathered cattle and horses, loaded trucks, drug calves and sorted cattle. Broke inside or out, she has a polished handle and plenty of fancy buttons. Waddie is excelling in the heading, standing flat in the box and putting you in position to win. Smooth through the corner and facing, she stays honest, confident and adapts to her rider.",
+    "image": "images/lot-13.jpg"
   },
   {
-    "lot": 33,
-    "registered_name": "PASTOR JACKSON",
-    "barn_name": "PJ",
+    "lot": 14,
+    "registered_name": "CJ HANCOCK BAR LENA",
+    "barn_name": "Spryo",
+    "year": 2021,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Spryo",
+    "sire_detail": "Spryo (Jesses Lil Echo (Smart Lil Ricochet x Janita James) x Pecos Quil (Quil China Bar x Miss San Solitas))",
+    "dam": "WWR Ms Hancock Bar",
+    "dam_detail": "WWR Ms Hancock Bar (Poco Lew Hancock (Hancock Duplicate x Hancocks Poco Lou) x Miss Forty Seven 895 (Cona Bars x Sweet Camp))",
+    "consignor": "Consigned by Brady Clark",
+    "notes": "Ranch Employee Consignment",
+    "description": "This gelding will fit most all riders and is gentle and solid. He is started in the heading and heeling and he stays quiet and wants to help please the rider. This gelding is a pleasure to ride on the ranch or in the arena.",
+    "image": "images/lot-14.jpg"
+  },
+  {
+    "lot": 15,
+    "registered_name": "ZOOM TO THE MUSIC",
+    "barn_name": "Zoom",
+    "year": 2023,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "CB Turn Up The Music",
+    "sire_detail": "CB Turn Up The Music (Boogers Cee Bar (Cee Booger Red x Troggies Harlander) x Tycoon Music (Colonel Tycoon x Western Music))",
+    "dam": "Runner Zooming",
+    "dam_detail": "Runner Zooming (Shazoom (Takin On The Cash x Keep On Shining) x Phantom Runner EO (Mr Eye Opener x Time to Beduino))",
+    "consignor": "K4 Ranch",
+    "notes": "",
+    "description": "Zoom has the build, athleticism, and speed to excel in the performance horse industry. He is level-headed, rides around with ease, lopes collected circles, and is responsive to your leg. He has been hauled, worked turn back cattle, ridden outside on the trails, and has seen plenty beyond the arena. He loads, hauls, ties and stands quietly. He has been dragging a log and is started on the heading sled, giving him a solid foundation for a career in the roping or barrel pen. If you're looking for a well started young gelding with the mind, ability and versatility to take any direction, Zoom is ready.",
+    "image": "images/lot-15.jpg"
+  },
+  {
+    "lot": 16,
+    "registered_name": "BOOGERS GOT NO BLING",
+    "barn_name": "Boogers Got No Bling",
     "year": 2020,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Boogers Cee Bar",
+    "sire_detail": "Boogers Cee Bar (Cee Booger Red (Cee Bar Badger 71 x Cross 159 Bell 71) x Troggies Harlander (Harlander x Miss Money Bars))",
+    "dam": "Miami Bling 05",
+    "dam_detail": "Miami Bling 05 (Glitterman 85 (Dewan 65 x Moon Glitter 72) x Miami Dreams 95 (Secret Hello 87 x Speak Straight 87))",
+    "consignor": "K4 Ranch",
+    "notes": "",
+    "description": "This is a solid mare that will help get any job done. She's tough, gritty and a smooth traveler. She is solid in all aspects of ranch work and just gets better every day. She gets along with all the other horses, is an easy keeper and hauls good. She would make an excellent ranch trail or ranch riding show horse. Being Ranching Heritage bred and eligible this would be an excellent second career, or with her diverse pedigree she would make an excellent broodmare. She is the last mare by Boogers Cee Bar, K4 Ranch's standout stallion.",
+    "image": "images/lot-16.jpg"
+  },
+  {
+    "lot": 17,
+    "registered_name": "MOON PIE",
+    "barn_name": "Moon Pie",
+    "year": 2017,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Grade",
+    "sex": "Mare",
+    "sire": "",
+    "sire_detail": "",
+    "dam": "",
+    "dam_detail": "",
+    "consignor": "Consigned by Beano Kimball",
+    "notes": "Ranch Employee Consignment",
+    "description": "This is a true ranch horse deluxe and the kind that every outfit searches for but few ever have. This dependable mare has earned her keep doing every job on the ranch. Moon Pie is the same honest, willing partner every time you throw a saddle on her. Gentle, kind and trustworthy, she is safe for the entire family to enjoy. Whether it's a seasoned rancher needing a reliable mount for a day's work, the wife wanting a relaxing trail ride or the kids learning how to rope, Moon Pie will take care of the entire family.",
+    "image": "images/lot-17.jpg"
+  },
+  {
+    "lot": 18,
+    "registered_name": "NIGHT HAWK LADY",
+    "barn_name": "Lady",
+    "year": 2024,
+    "color": "Black",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "CB Turn Up The Music",
+    "sire_detail": "CB Turn Up The Music (Boogers Cee Bar (Cee Booger Red x Troggies Harlander) x Tycoon Music (Colonel Tycoon x Western Music))",
+    "dam": "Peppy Dont Be Shy",
+    "dam_detail": "Peppy Dont Be Shy (Gunshy 00 (Joe Derringer x Miss Tucker Smoke) x Daddys Real Peppy (Chasing Daddy x Fiddlers Real Peppy))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "Lady shows natural athleticism, a trainable mind, and has the right build to be long lasting. She is the type that is ready to be caught and see what she will learn each day. She travels smoothly at each gait, wants to stop and use her hind end naturally. This mare, started by Cody Lamont, was a barn favorite during her 90 days. As we have continued her training she has shown honesty in learning quickly and having a positive attitude.",
+    "image": "images/lot-18.jpg"
+  },
+  {
+    "lot": 19,
+    "registered_name": "NO LEAVING ON YADI",
+    "barn_name": "No Leaving On Yadi",
+    "year": 2021,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Coronas Leavying You",
+    "sire_detail": "Coronas Leavying You (Corona Cartel (Holland Ease x Corona Chick) x Lil Bit Rusty (Easily Smashed x Rusty Rockette))",
+    "dam": "Sugars Lil Katolena",
+    "dam_detail": "Sugars Lil Katolena (Mr Freckles Olena (Colonel Freckles x Kitty Olena) x Sugar To Show (Master Jet Moore x Miss Bow Sugar 68))",
+    "consignor": "Consigned by Justin & Megan Janda",
+    "notes": "Ranch Employee Consignment",
+    "description": "This pretty 5-year-old all around prospect is quiet, kind, and very willing with the eye appeal and conformation to go in any direction. She is extremely user friendly, well started and is ready for a career in whatever discipline you decide to pursue. She has been used extensively on the ranch and started on the head side by Billie Jack Saebens.",
+    "image": "images/lot-19.jpg"
+  },
+  {
+    "lot": 20,
+    "registered_name": "SHY BOOGER",
+    "barn_name": "Reverend",
+    "year": 2023,
     "color": "Sorrel",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Brother Jackson",
-    "dam": "Red Carpet Style",
-    "consignor": "Katie Marshall",
-    "agent": "",
-    "phone": "530.227.1164",
+    "sire": "Booger Sharp Dressin",
+    "sire_detail": "Booger Sharp Dressin (Bestcreditmesunfrost (Sun Frost x Nonstopwithcredit) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "Peppy Dont Be Shy",
+    "dam_detail": "Peppy Dont Be Shy (Gunshy 00 (Joe Derringer x Miss Tucker Smoke) x Daddys Real Peppy (Chasing Daddy x Fiddlers Real Peppy))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "PJ is a 2020 sorrel AQHA gelding by Brother Jackson out of Red Carpet Style. At six years old, he's young enough to have a long career ahead and old enough to start making a hand. His Brother Jackson breeding brings working ranch horse genetics, and that sorrel coat is classic quarter horse. Consigned by Katie Marshall from California \u2014 her second entry in this sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-24/public"
+    "description": "This exceptional gelding has already proven himself as a dependable, go-to ranch horse. He loves to have a job and has done just about every task at the ranch. He can handle big drives and long days in the pens. Reverend is tough, quick footed, cowy and built right. With a solid foundation and proven breeding to back him up he will be an exciting rope horse prospect with all the tools to excel. An experienced rider is recommend because he is quick and catty.",
+    "image": "images/lot-20.jpg"
   },
   {
-    "lot": 34,
-    "registered_name": "GOVERNOR",
-    "barn_name": "Governor",
-    "year": 2011,
-    "color": "Grey",
-    "breed": "Azteca",
-    "sex": "Gelding",
-    "sire": "Aveiro Do Mito",
-    "dam": "Just Semi Sweet",
-    "consignor": "Keily Stewart",
-    "agent": "",
-    "phone": "250.263.4477",
-    "notes": "",
-    "description": "Governor is a 2011 grey Azteca gelding by Aveiro Do Mito out of Just Semi Sweet. As one of only a few non-quarter horse breeds in the sale, Governor stands out with his Azteca heritage \u2014 a cross of Andalusian and quarter horse that produces horses with incredible presence, smooth gaits, and natural collection. At fifteen, he's an experienced partner. Consigned by Keily Stewart from British Columbia.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-25/public"
-  },
-  {
-    "lot": 35,
-    "registered_name": "SWAGGAR N SOUL",
-    "barn_name": "Sway",
+    "lot": 21,
+    "registered_name": "PLAYIN WITH BOOGERS",
+    "barn_name": "Boog",
     "year": 2022,
     "color": "Red Roan",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Stevie Rey Von",
-    "dam": "Lizzies Pick",
-    "consignor": "Burnett Ranches LLC",
-    "agent": "Fallon Rand, Agent",
-    "phone": "806.787.2960",
-    "notes": "",
-    "description": "Sway is a 2022 red roan AQHA mare by Stevie Rey Von out of Lizzies Pick. Stevie Rey Von is one of the most sought-after young sires in the cutting industry, making Sway a mare with serious pedigree power. At four years old, she's a young prospect with the breeding to compete at the highest levels or produce foals that will. Consigned by Burnett Ranches LLC with Fallon Rand as agent.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-26/public"
-  },
-  {
-    "lot": 36,
-    "registered_name": "H FANCY REY",
-    "barn_name": "Reba",
-    "year": 2018,
-    "color": "Bay",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Sammi Rey",
-    "dam": "HR Black Smoke",
-    "consignor": "Kendell Sorrell",
-    "agent": "",
-    "phone": "903.388.4599",
-    "notes": "",
-    "description": "Reba is a 2018 bay AQHA mare by Sammi Rey out of HR Black Smoke. At eight years old, she's a solid, proven mare in her working prime. Sammi Rey brings reined cow horse breeding and her bay coat gives her that timeless quarter horse look. She's the kind of mare that works hard during the week and cleans up nice for the weekend shows. Consigned by Kendell Sorrell from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-27/public"
-  },
-  {
-    "lot": 37,
-    "registered_name": "SMART GATITO",
-    "barn_name": "Grease",
-    "year": 2021,
-    "color": "Bay",
-    "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "RN Highbrow Lena",
-    "dam": "Gina Doc Dually",
-    "consignor": "Taylor Paige",
-    "agent": "",
-    "phone": "806.654.5490",
+    "sire": "Hughes That Booger",
+    "sire_detail": "Hughes That Booger (Thomas E Hughes (High Brow Cat x Smart Letha) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "PM Playgirl Bertjoe",
+    "dam_detail": "PM Playgirl Bertjoe (Birch Creek Bert (Bayou Bert x Neel Four) x Boleos Playgirl (Playboys Braxton x Boleos Linda 82))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Grease is a 2021 bay AQHA gelding by RN Highbrow Lena out of Gina Doc Dually. The Highbrow Lena and Doc breeding on his papers is cutting horse gold. At five years old, he's a young gelding with tremendous upside and the pedigree to back it up. Bay geldings with this kind of breeding are the backbone of the cow horse industry. Consigned by Taylor Paige from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-28/public"
+    "description": "With plenty of eye appeal and a pedigree to match, Boog is quick footed, naturally cowy, and has a willing attitude that makes him a pleasure to ride and train. He's been started in the arena on both the heading and heeling and is progressing with ease, showing all the qualities of a standout rope horse prospect. If you're looking for a young horse with the brains, athleticism, and versatility to excel both on the ranch and in the arena, Boog is the one. He's the kind that has the talent and mindset to go in any direction.",
+    "image": "images/lot-21.jpg"
   },
   {
-    "lot": 38,
-    "registered_name": "MISTER SMART N SHINY",
-    "barn_name": "Fred",
-    "year": 2021,
-    "color": "Bay Roan",
+    "lot": 22,
+    "registered_name": "SHINY SILVER BUCKLES",
+    "barn_name": "Shiny Silver Buckles",
+    "year": 2023,
+    "color": "Brown",
     "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Shiny Cowboy Morning",
-    "dam": "SH Pollyanna Chex",
-    "consignor": "Ripley Bellio, 2 Ranch LLC",
-    "agent": "",
-    "phone": "970.756.5005",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Ron Burgandy Buckles",
+    "sire_detail": "Ron Burgandy Buckles (Buckle Up Jet (Bambino Jet x Manorcliffe) x Zan Belle (Zans Last Parr x Aggie Belle))",
+    "dam": "Silver Cactalena",
+    "dam_detail": "Silver Cactalena (High Brow San Peppy (High Brow Hickory x Rose O Lena Dancer) x Cactalena San Lena (Especialysmarpeppy x Janes Silver Doc))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Fred is a 2021 bay roan AQHA gelding by Shiny Cowboy Morning out of SH Pollyanna Chex. His Shiny breeding brings modern reining and cow horse genetics, and that bay roan color is always in demand. At five years old, he's young with plenty of room to develop. Consigned by Ripley Bellio of 2 Ranch LLC from Colorado \u2014 a program with an eye for quality.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-29/public"
+    "description": "This mare has the mind and versatility to excel in any direction. Gentle, kind and eager to please, she is soft in the mouth, broke in the ribs and has a smooth, athletic way of moving. Quick to learn, she gets better with every ride. She has plenty of motor when asked, yet comes right back on a loose rein. Naturally cowy, she ropes the sled, tracks cattle and has proven herself on big gathers, dragging calves and sorting pens. Stout with big feet, she is willing, dependable and ready for her next job.",
+    "image": "images/lot-22.jpg"
   },
   {
-    "lot": 39,
-    "registered_name": "BOONEY OUTLAW",
-    "barn_name": "Cornpop",
+    "lot": 23,
+    "registered_name": "IM NACHO ALIBI",
+    "barn_name": "Nacho",
+    "year": 2023,
+    "color": "Palomino",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Nacho Cat",
+    "sire_detail": "Nacho Cat (High Brow Cat (High Brow Hickory x Smart Little Kitty) x My Blonde Playmate (Smart Mate x Dry Doc Chick))",
+    "dam": "Pistol Annies Alibi",
+    "dam_detail": "Pistol Annies Alibi (Big Swing (Justa Swinging Peppy x Doctor Kachina) x Playguns Alibi (Playgun x Misty Alibi))",
+    "consignor": "Consigned by Brady Biery",
+    "notes": "Ranch Employee Consignment",
+    "description": "Nacho is a good footed, stout, nice moving colt. He has been the miles, doctored a handful of cattle and has already had a bunch of calves drug on him. He knows a full days work and has made some big drives. He watches a cow and will be big enough to head on. He wants to be quiet and will catch your eye with his color.",
+    "image": "images/lot-23.jpg"
+  },
+  {
+    "lot": 24,
+    "registered_name": "NOT ENUFF PISTOLS",
+    "barn_name": "Not Enuff Pistols",
     "year": 2021,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Gunshy 00",
+    "sire_detail": "Gunshy 00 (Joe Derringer (Playgun x Joie Starlight) x Miss Tucker Smoke (Doc Tom Tucker x Ima Smoke))",
+    "dam": "Chollas Enuff Door",
+    "dam_detail": "Chollas Enuff Door (Enuff Run (Fancy Red Bark x Red Spool Lady 82) x Miss Star Door (Door Chex x Miss Kaliape 79))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "This horse is as tough and gritty as they come and there is nothing that can't be done on him. He has been used in all aspects of ranch work, been heeled on in the arena and is very cowy. He is fast and athletic and also easy to be around, but he excels with a confident rider.",
+    "image": "images/lot-24.jpg"
+  },
+  {
+    "lot": 25,
+    "registered_name": "DASHIN FOR BLUE",
+    "barn_name": "Blue",
+    "year": 2021,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Blue Moon Candy",
+    "sire_detail": "Blue Moon Candy (Send A Candy Guy (PYC Paint Your Wagon x Send The Guys Candy) x Dashin Brown Eyes (Mr Eye Opener x Perfection In Brown))",
+    "dam": "LL Ita Streakin Te",
+    "dam_detail": "LL Ita Streakin Te (Smokin Streaker (Streakin Dash x Tiny Ribbons) x Anita Te (Blazin Te Bar x Manzanita Nell))",
+    "consignor": "Consigned by Teejay & Michaella Fenster",
+    "notes": "Ranch Employee Consignment",
+    "description": "Blue comes from the Lay Ranch breeding program out of Wyoming, giving him a strong lineage of earners and producers. Blue is solid in every aspect of ranch work in the Sandhills, making him a prime addition to anyone's string. He's been hauled on the head side to jackpots and is showing great promise! He has also been used as a pick up horse for broncs at the local rodeos. He is big, pretty, athletic, sound and gentle for anyone.",
+    "image": "images/lot-25.jpg"
+  },
+  {
+    "lot": 26,
+    "registered_name": "VE SHAKE N SHINE",
+    "barn_name": "Quiver",
+    "year": 2017,
     "color": "Sorrel",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Shiney Outlaw",
-    "dam": "Mecom Dance",
-    "consignor": "CF Livestock - Morgan Flitner",
-    "agent": "",
-    "phone": "307.272.6925",
-    "notes": "",
-    "description": "Cornpop is a 2021 sorrel AQHA gelding by Shiney Outlaw out of Mecom Dance. Shiney Outlaw brings Shining Spark reining genetics, and at five years old Cornpop is a young gelding with the breeding for ranch and arena versatility. His sorrel coat is classic and clean, and his pedigree points to natural athletic ability. Consigned by CF Livestock with Morgan Flitner from Wyoming.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-30/public"
+    "sire": "Shiney Dual Rey",
+    "sire_detail": "Shiney Dual Rey (Dual Rey (Dual Pep x Nurse Rey) x Shiners Madam (Shining Spark x Missy Lena))",
+    "dam": "She Will Cut",
+    "dam_detail": "She Will Cut (Third Cutting (Boonlight Dancer x Crab Grass) x Willfull (Smart Lil Ricochet x Shes Pretty Smooth))",
+    "consignor": "Consigned by Beano & Wendy Kimball",
+    "notes": "Ranch Employee Consignment",
+    "description": "Quiver has been a great ranch horse and excels when it's time to sort cattle, showcasing his cutting background. He has the stamina to be used all day on the ranch and then go to the arena or the cutting pen. He has been used extensively at all the local shows as a turn back horse along with being hauled to some team ropings. He would fit an intermediate to advanced rider as he is quick footed and sharp.",
+    "image": "images/lot-26.jpg"
   },
   {
-    "lot": 40,
-    "registered_name": "MONOPOLY MONEY",
-    "barn_name": "Stewie",
-    "year": 2022,
-    "color": "Buckskin",
-    "breed": "Gypsy Vanner",
+    "lot": 27,
+    "registered_name": "BOOTS",
+    "barn_name": "Boots",
+    "year": 2008,
+    "color": "—",
+    "breed": "AQHA",
+    "registration": "AQHA Grade",
     "sex": "Gelding",
     "sire": "",
+    "sire_detail": "",
     "dam": "",
-    "consignor": "Adrieen Staudinger",
-    "agent": "",
-    "phone": "479.685.5020",
+    "dam_detail": "",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Stewie is a 2022 buckskin Gypsy Vanner gelding with the rare combination of Gypsy Vanner feathering and bone in a beautiful buckskin color. At four years old, he's a young prospect in one of the most unique breed-and-color combinations in the entire sale. Gypsy Vanners are known for their temperament and willingness, making Stewie a standout entry. Consigned by Adrieen Staudinger from Arkansas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-31/public"
+    "description": "Boots has been one of the Diamond A Ranch's top horses for years. He has never taken a lame step and although he might show a few battle scars from his years of working cattle in rough country, he's still got a lot of years left to do any job. Boots is a sucker for getting brushed and a good bath. He is a cool hand Luke in the branding pen and gives you an easy shot. He loves his job as a ranch horse but would love to be pampered and go on some amazing trail rides!",
+    "image": "images/lot-27.jpg"
   },
   {
-    "lot": 41,
-    "registered_name": "PLAYGUNS SHADY BABY",
-    "barn_name": "Chiquita",
+    "lot": 28,
+    "registered_name": "BUCKLE BUZZIN CITA",
+    "barn_name": "Leddy",
+    "year": 2018,
+    "color": "Sorrel",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Ron Burgandy Buckles",
+    "sire_detail": "Ron Burgandy Buckles (Buckle Up Jet (Bambino Jet x Manorcliffe) x Zan Belle (Zans Last Parr x Aggie Belle))",
+    "dam": "Buzzy Bee Drift",
+    "dam_detail": "Buzzy Bee Drift (Baron Sanddrift (Mr Baron Red x Drifter's Doll) x Miss Whiz Reward (Rewarding John 85 x Gee Whiz Gigi 85))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "An old pro at all ranch duties, Leddy has mastered all the important jobs required for ranch horses. She has plenty of gas in the tank to go all day and travels smoothly in rough and rocky terrain. She is a big statured mare, able to withstand any work that is asked of her. She's good to shoe, gets along with all the horses when turned out together and has been hauled miles and miles.",
+    "image": "images/lot-28.jpg"
+  },
+  {
+    "lot": 29,
+    "registered_name": "PURE METALLIC",
+    "barn_name": "Peanut",
     "year": 2021,
     "color": "Bay Roan",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "LW Playguns Diamond",
-    "dam": "Im Playinintheshade",
-    "consignor": "Madeline Chandler",
-    "agent": "",
-    "phone": "803.672.9482",
-    "notes": "",
-    "description": "Chiquita is a 2021 bay roan AQHA mare by LW Playguns Diamond out of Im Playinintheshade. With Playgun breeding on both sides of her pedigree, Chiquita is bred for cow work from top to bottom. At five years old, she's an athletic young mare with a bay roan coat that adds flash to her already impressive papers. Consigned by Madeline Chandler from South Carolina.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-32/public"
-  },
-  {
-    "lot": 42,
-    "registered_name": "CHEX MY GUNZ",
-    "barn_name": "420",
-    "year": 2021,
-    "color": "Palomino",
-    "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Modern Gun",
-    "dam": "Miss Chilly Chex",
-    "consignor": "Saige Cunningham",
-    "agent": "",
-    "phone": "605.770.2571",
-    "notes": "",
-    "description": "420 is a 2021 palomino AQHA gelding by Modern Gun out of Miss Chilly Chex. That golden palomino color combined with Modern Gun breeding makes him both beautiful and purposeful. At five years old, he's entering his prime with the kind of cow horse genetics that buyers look for. His Chilly Chex dam side adds reining depth. Consigned by Saige Cunningham from South Dakota.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-33/public"
+    "sire": "Montana Metallic",
+    "sire_detail": "Montana Metallic (Metallic Cat (High Brow Cat x Chers Shadow) x On The Shy Side (Dual Pep x Ms Chiquita Senorita))",
+    "dam": "Polly Pureheart",
+    "dam_detail": "Polly Pureheart (SR Hallmarked (Doc's Hickory x Doc's Serendipity) x Dregersdrysallychex (Dry Doc Chex x Tucker Kitty Chex 83))",
+    "consignor": "Consigned by Marianne Clark",
+    "notes": "Ranch Employee Consignment",
+    "description": "Peanut doesn't know he's a smaller sized horse as he's got a ton of grit to back him up. He is gentle with a big motor. He has natural cow and everything is easy for him. He's had cattle caught outside and will hold a rope on his own. He is started in the heading, heeling and breakaway.",
+    "image": "images/lot-29.jpg"
   },
   {
-    "lot": 43,
-    "registered_name": "CASHFORCOUGARS",
-    "barn_name": "Cougar",
-    "year": 2018,
-    "color": "Bay",
+    "lot": 30,
+    "registered_name": "LT STONE CAT",
+    "barn_name": "LT Stone Cat",
+    "year": 2023,
+    "color": "Brown",
     "breed": "AQHA",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Cat Nurse",
-    "dam": "Doll R Sign",
-    "consignor": "Hannah Anderson",
-    "agent": "",
-    "phone": "406.850.0689",
-    "notes": "",
-    "description": "Cougar is a 2018 bay AQHA gelding by Cat Nurse out of Doll R Sign. The Cat breeding on his sire side means cutting ability is in his DNA, and at eight years old he's a proven, mature gelding ready to go to work. Bay AQHA geldings with Cat breeding are the workhorses of the Western performance world. Consigned by Hannah Anderson from Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-34/public"
+    "sire": "Little Cat Playboy",
+    "sire_detail": "Little Cat Playboy (RJ Lucky Cat Olena (Little Cat Olena x Gamblin Black Queen) x TRR Playboy Gold (Jaz Poco Goldun Blue x Playboys Smurfette))",
+    "dam": "LTYellowstone",
+    "dam_detail": "LTYellowstone (Big Jet Doc (Big Wampum 79 x Cheyenne Doc Jet) x Olena Kings Belle (Athena Flits Bee x My Texas Mist))",
+    "consignor": "Consigned by Clint Cross",
+    "notes": "Ranch Employee Consignment",
+    "description": "This gelding has been used all spring and into the summer doing all ranch duties; gathering, branding and is now started tracking the heeling dummy. He can have time off and is the same horse as when you laid him off. He stands quietly to be shod also.",
+    "image": "images/lot-30.jpg"
   },
   {
-    "lot": 44,
-    "registered_name": "PONY BOY",
-    "barn_name": "Pony Boy",
+    "lot": 31,
+    "registered_name": "PEPTOS SMOKIN REWARD",
+    "barn_name": "Peptos Smokin Reward",
     "year": 2022,
-    "color": "Blue Roan",
-    "breed": "Pony",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Denim Thorson",
-    "agent": "Triple T Livestock",
-    "phone": "507.951.7880",
-    "notes": "",
-    "description": "Pony Boy is a 2022 blue roan pony gelding \u2014 and blue roan on a pony is about as rare and eye-catching as it gets. At four years old, he's young with that stunning smoky blue coloring that people can't stop staring at. Ponies are in huge demand for youth and family programs, and this one comes with a color that money can't usually buy. Consigned by Denim Thorson with Triple T Livestock.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-35/public"
-  },
-  {
-    "lot": 45,
-    "registered_name": "A GREYT REMEDY",
-    "barn_name": "Rambo",
-    "year": 2017,
-    "color": "Grey",
+    "color": "Gray",
     "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "A Cat Is A Remedy",
-    "dam": "Do The Greyt",
-    "consignor": "Shania Whiteman",
-    "agent": "",
-    "phone": "406.480.1203",
-    "notes": "",
-    "description": "Rambo is a 2017 grey AQHA gelding by A Cat Is A Remedy out of Do The Greyt. His Cat breeding gives him natural cow sense, and at nine years old with that beautiful grey coat, he's a horse that's easy on the eyes and easy to ride. Grey horses only get more striking with age, and Rambo is in his prime. Consigned by Shania Whiteman from Montana.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-36/public"
-  },
-  {
-    "lot": 46,
-    "registered_name": "BADGER",
-    "barn_name": "Badger",
-    "year": 2017,
-    "color": "Tri Colored",
-    "breed": "Draft X",
+    "registration": "AQHA Reg.",
     "sex": "Mare",
-    "sire": "",
-    "dam": "",
-    "consignor": "Vanessa Ould",
-    "agent": "",
-    "phone": "587.999.1244",
-    "notes": "",
-    "description": "Badger is a 2017 tri-colored draft cross mare with the kind of bold markings and substantial bone that make draft crosses so popular. At nine years old, she's a proven, steady mare with the size and temperament to handle any rider. Tri-colored markings make her one of the most visually striking entries in the entire sale. Consigned by Vanessa Ould from Alberta, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-10/public"
+    "sire": "Haidas Dollar",
+    "sire_detail": "Haidas Dollar (Haidas Little Pep (Peppy San Badger x Doc's Haida) x Miss Hickory Joker (Doc's Hickory x Joker Mam 73))",
+    "dam": "Swen First Pepto",
+    "dam_detail": "Swen First Pepto (Peptos Dancer Lena (Peptoboonsmal x CanCan Kitty) x Swen First Ring (Smokin Reward x Bell Mare 435))",
+    "consignor": "Consigned by Joe & Kayla Deshazo",
+    "notes": "Ranch Employee Consignment",
+    "description": "This striking gray mare will catch your eye. She was born and raised in rough, rocky Arizona county and started on the Diamond A ranch. She has been turned out with other horses her whole life. Long days of gathering, dragging calves to the fire, roping cattle outside are all easy tasks for her. She is gentle and extremely athletic, will watch a cow and is on the right track to make a nice heel horse prospect, roping the sled and live cattle in the arena. Her bloodlines speak for themselves with Haidas Lil Pep and Peptoboonsmal on them. The sire and dam were added to the Diamond A bands a couple years back.",
+    "image": "images/lot-31.jpg"
   },
   {
-    "lot": 47,
-    "registered_name": "SNICKERS",
-    "barn_name": "Snickers",
-    "year": 2020,
-    "color": "Black",
-    "breed": "Quarter Pony",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Tulsa Peterson - Patten Rope Horses",
-    "agent": "",
-    "phone": "780.542.0146",
-    "notes": "",
-    "description": "Snickers is a 2020 black quarter pony gelding with the compact build and willing attitude that quarter ponies are known for. At six years old, he's young and experienced \u2014 the perfect combination for a family horse or youth partner. That solid black coat gives him a sleek, polished look. Consigned by Tulsa Peterson of Patten Rope Horses from Alberta, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-11/public"
-  },
-  {
-    "lot": 48,
-    "registered_name": "CLINT ESQUIRE",
-    "barn_name": "Clint",
-    "year": 2013,
-    "color": "\u2014",
-    "breed": "Spanish Barb",
-    "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Ty Holzum",
-    "agent": "",
-    "phone": "209.499.7955",
-    "notes": "",
-    "description": "Clint is a 2013 Spanish Barb gelding \u2014 one of the rarest breeds in North America and the only one in this sale. Spanish Barbs trace directly to the horses brought by Spanish explorers, making Clint a living piece of equine history. At thirteen years old, he's experienced and steady with the endurance and sure-footedness that Spanish Barbs are famous for. Consigned by Ty Holzum from California.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-12/public"
-  },
-  {
-    "lot": 49,
-    "registered_name": "ROOSTER SASSED ME",
-    "barn_name": "Little Bit",
-    "year": 2018,
-    "color": "Blue Roan",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Hancocks Bluerooster",
-    "dam": "Too Stylish N Sassy",
-    "consignor": "Sarah Armstrong",
-    "agent": "",
-    "phone": "817.888.2190",
-    "notes": "",
-    "description": "Little Bit is a 2018 blue roan AQHA gelding by Hancocks Bluerooster out of Too Stylish N Sassy. Blue roan is one of the most sought-after colors in the quarter horse world, and Little Bit pairs it with Hancock and Stylish breeding \u2014 a combination built for ranch work and durability. At eight years old, he's solid, proven, and ready. Consigned by Sarah Armstrong from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-13/public"
-  },
-  {
-    "lot": 50,
-    "registered_name": "KING LOVIN HOLLY",
-    "barn_name": "Buttercup",
-    "year": 2020,
-    "color": "Palomino",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "GB King Holly 14",
-    "dam": "Chic Luvin Cat",
-    "consignor": "Turner Performance Horses",
-    "agent": "",
-    "phone": "406.381.2348",
-    "notes": "",
-    "description": "Buttercup is a 2020 palomino AQHA mare by GB King Holly 14 out of Chic Luvin Cat. Golden palomino with Cat breeding on the dam side makes Buttercup both beautiful and purposeful. At six years old, she's an athletic mare in her prime with value as both a performance horse and future broodmare. Consigned by Turner Performance Horses from Montana \u2014 their second entry in the sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-extra-14/public"
-  },
-  {
-    "lot": 51,
-    "registered_name": "LADY T DREAMER",
-    "barn_name": "Ladybug",
+    "lot": 32,
+    "registered_name": "CHOLLA RED RAVEN",
+    "barn_name": "Stretch",
     "year": 2015,
     "color": "Sorrel",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "I'm Countin Checks",
-    "dam": "Sara Zack",
-    "consignor": "Kelsey Love Thomas",
-    "agent": "",
-    "phone": "325.998.2085",
-    "notes": "",
-    "description": "Ladybug is a 2015 sorrel AQHA mare by I'm Countin Checks out of Sara Zack. At eleven years old, she's a mature, reliable mare with the experience and temperament that comes from years of being handled and ridden. Her breeding points to versatility, and her sorrel coat is timeless quarter horse. Consigned by Kelsey Love Thomas from Texas \u2014 her second entry in this sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-37/public"
-  },
-  {
-    "lot": 52,
-    "registered_name": "WARPONY",
-    "barn_name": "Warpony",
-    "year": 2020,
-    "color": "Sorrel",
-    "breed": "Pony",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "",
-    "dam": "",
-    "consignor": "Brittany & Hunter Haubold",
-    "agent": "",
-    "phone": "303.803.2576",
+    "sire": "Pauls Good N Red",
+    "sire_detail": "Pauls Good N Red (Naturally San (San Tip x Naturally Good) x Pauls Dee Dee 83 (Pauls Dee Bar x Rapid Punken 80))",
+    "dam": "Cholla June Chex",
+    "dam_detail": "Cholla June Chex (Saltys Willie (Salty Blue Hancock x Will Beaus Cutie 83) x Maple Chex (Door Chex x Miss Kaliape 79))",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "Warpony is a 2020 sorrel pony gelding with the heart and grit that his name suggests. At six years old, he's young and ready for adventure \u2014 whether that's ranch work, trail riding, or becoming some lucky kid's best friend. Ponies with this kind of willing attitude are always in demand. Consigned by Brittany and Hunter Haubold from Colorado.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-38/public"
+    "description": "Stretch is an easy going and gentle Diamond A raised horse. He has a big motor if needed but would gladly take it easy just doing what's asked of by his rider. Stretch is an accomplished ranch horse but could sit all winter and when needed is the same horse as when you put him in his pen. Stretch is a great ranch horse but would be an excellent ranch trail horse.",
+    "image": "images/lot-32.jpg"
   },
   {
-    "lot": 53,
-    "registered_name": "CANADIANA LAICOSGOLD",
-    "barn_name": "Sand Hill",
+    "lot": 33,
+    "registered_name": "MR QUIXOTES DYNAMITE",
+    "barn_name": "Fuse",
     "year": 2021,
-    "color": "Palomino",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Canadianashoohancock",
-    "dam": "Canadiana Mslaicobar",
-    "consignor": "Geraldine Patten",
-    "agent": "",
-    "phone": "780.542.0146",
-    "notes": "",
-    "description": "Sand Hill is a 2021 palomino AQHA gelding by Canadianashoohancock out of Canadiana Mslaicobar. His Hancock breeding brings proven ranch horse toughness and durability, and that palomino color makes him impossible to miss. At five years old, he's a young gelding with Canadian breeding that combines substance and style. Consigned by Geraldine Patten from Alberta, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-39/public"
-  },
-  {
-    "lot": 54,
-    "registered_name": "CABLE JAY",
-    "barn_name": "Earp",
-    "year": 2017,
-    "color": "Grey",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "JB Cables Runaway",
-    "dam": "Jays Melody",
-    "consignor": "Beau Rees",
-    "agent": "Brooke Curuchet, Agent",
-    "phone": "435.849.4941",
-    "notes": "",
-    "description": "Earp is a 2017 grey AQHA gelding by JB Cables Runaway out of Jays Melody. At nine years old with a beautiful grey coat, Earp is a mature gelding with the experience to handle whatever comes his way. Grey horses carry a timeless elegance, and Earp's ranch breeding backs up his good looks with working ability. Consigned by Beau Rees with Brooke Curuchet as agent from Utah.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-40/public"
-  },
-  {
-    "lot": 55,
-    "registered_name": "TRAVALENAS PLAYBOY",
-    "barn_name": "Cochise",
-    "year": 2021,
-    "color": "Bay Tobiano",
-    "breed": "APHA",
-    "sex": "Gelding",
-    "sire": "Catch This Color",
-    "dam": "Travelenas Straitchic",
-    "consignor": "Carmen & Tom Buckingham",
-    "agent": "",
-    "phone": "208.599.3611",
-    "notes": "",
-    "description": "Cochise is a 2021 bay tobiano APHA gelding by Catch This Color out of Travelenas Straitchic. That bold tobiano pattern with bay and white markings makes Cochise one of the flashiest horses in the sale. At five years old, he's young with APHA registration and the kind of color that paint horse enthusiasts dream about. Consigned by Carmen and Tom Buckingham from Idaho.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-41/public"
-  },
-  {
-    "lot": 56,
-    "registered_name": "WHIZN CHOCOLENA",
-    "barn_name": "Dip",
-    "year": 2020,
     "color": "Brown",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Whiz A Great Banjo",
-    "dam": "Zans Lena Dude",
-    "consignor": "Emily Crichton",
-    "agent": "",
-    "phone": "250.819.2440",
-    "notes": "",
-    "description": "Dip is a 2020 brown AQHA mare by Whiz A Great Banjo out of Zans Lena Dude. Whiz and Lena breeding on her papers means reining and cow horse ability runs deep in her veins. At six years old, she's an athletic mare with a rich brown coat and the genetics to perform or produce. Consigned by Emily Crichton from British Columbia, Canada.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-42/public"
-  },
-  {
-    "lot": 57,
-    "registered_name": "BQH DUNIT BY HEAVEN",
-    "barn_name": "Haven",
-    "year": 2020,
-    "color": "Buckskin",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Dunit Twisted",
-    "dam": "Four Six Heaven",
-    "consignor": "Cheyenne McPhail",
-    "agent": "SKC Livestock",
-    "phone": "806.282.7093",
-    "notes": "",
-    "description": "Haven is a 2020 buckskin AQHA mare by Dunit Twisted out of Four Six Heaven. Buckskin color with Dunit breeding is a winning combination \u2014 she's beautiful and bred for performance. At six years old, Haven is in her prime as both a riding horse and potential broodmare. Consigned by Cheyenne McPhail with SKC Livestock from Texas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-43/public"
-  },
-  {
-    "lot": 58,
-    "registered_name": "DOUBLE DS DOUG",
-    "barn_name": "Angus",
-    "year": 2021,
-    "color": "Black Tobiano",
-    "breed": "Gypsy",
+    "registration": "AQHA Reg.",
     "sex": "Gelding",
-    "sire": "Broadbents Ronaldo",
-    "dam": "Wishbone",
-    "consignor": "Saige Cunningham",
-    "agent": "",
-    "phone": "605.770.2571",
-    "notes": "",
-    "description": "Angus is a 2021 black tobiano Gypsy gelding by Broadbents Ronaldo out of Wishbone. His dramatic black and white tobiano markings combined with Gypsy feathering and bone make him a showstopper. At five years old, he's young with the gentle Gypsy temperament that makes the breed so beloved. Consigned by Saige Cunningham from South Dakota \u2014 her second entry in the sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-44/public"
+    "sire": "Peptos Coaltrain",
+    "sire_detail": "Peptos Coaltrain (CGOS Pepto Quixote (Peptoboonsmal x Otro Mundo) x Exploding Pepsi (Doc O Dynamite x Pepsi Mint))",
+    "dam": "Miss Siss Blackburn",
+    "dam_detail": "Miss Siss Blackburn (Mr Blackburn Champ (Mr Blackburn 41 x Sheilcut 66) x Bruces Hick (Doc's Hickory x Bruce's Miss 42 71))",
+    "consignor": "Consigned by Brodie Riggs",
+    "notes": "Ranch Employee Consignment",
+    "description": "Fuse is a cute little gelding that's easy to get on and enjoyable to ride. He is smooth moving, gentle and willing, making him a great partner for work or pleasure riding. Fuse has been used outside, roped off of and drug calves, giving him practical ranch experience. He handles himself well and is always ready for a day's work. If you are looking for a handy, good minded horse with a bright future, be sure to check out Fuse.",
+    "image": "images/lot-33.jpg"
   },
   {
-    "lot": 59,
-    "registered_name": "METALLIC NITROGEN",
-    "barn_name": "Nitro",
-    "year": 2022,
-    "color": "Red Roan",
-    "breed": "AQHA",
-    "sex": "Gelding",
-    "sire": "Frosted Metallic",
-    "dam": "Pink Nitro Glycerine",
-    "consignor": "Feather River College Foundation",
-    "agent": "",
-    "phone": "925.759.3454",
-    "notes": "",
-    "description": "Nitro is a 2022 red roan AQHA gelding by Frosted Metallic out of Pink Nitro Glycerine. The Metallic sire line is one of the most in-demand in the cutting industry, and at four years old Nitro is a young prospect with explosive potential \u2014 as his name suggests. Consigned by Feather River College Foundation from California, supporting equine education with every bid.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-45/public"
-  },
-  {
-    "lot": 60,
-    "registered_name": "THE DOWNTOWN GIRL",
-    "barn_name": "Bridgette",
-    "year": 2022,
-    "color": "Bay",
-    "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "The Offshore Account",
-    "dam": "Musically Made",
-    "consignor": "Adrieen Staudinger",
-    "agent": "",
-    "phone": "479.685.5020",
-    "notes": "",
-    "description": "Bridgette is a 2022 bay AQHA mare by The Offshore Account out of Musically Made. At four years old, she's a young mare with a modern pedigree and a classic bay coat. The Offshore Account is building a reputation as a sire, and Bridgette could be part of that story \u2014 either in the arena or as a broodmare. Consigned by Adrieen Staudinger from Arkansas.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-46/public"
-  },
-  {
-    "lot": 61,
-    "registered_name": "ARISTO ROCKIN",
-    "barn_name": "DG",
+    "lot": 34,
+    "registered_name": "LR MR BARS 21",
+    "barn_name": "LR Mr Bars 21",
     "year": 2021,
+    "color": "Blue Roan",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "LR Mr King Bars 14",
+    "sire_detail": "LR Mr King Bars 14 (Mr. King Doc Bar 2000 (Docs Amazon Bars 84 x Ms Doc Bars Is Blue) x Ms Lady Amazon King (Docs Amazon Bars 84 x Ladys Doc Bar Amaz95))",
+    "dam": "LR King Blue 16",
+    "dam_detail": "LR King Blue 16 (Mr B Blue Doc Bars (Mr Doc Bars Sugars82 x Ms Docbars Lady King) x LR Docbars King 004 (Docs Amazon Bars 84 x Ms Docbars Lady King))",
+    "consignor": "Consigned by Devon Wingard",
+    "notes": "Ranch Employee Consignment",
+    "description": "A gentle gray 5-year-old that has been dragging calves during the spring works on the wagon and is currently being used in day to day operations. He has a gentle demeanor and willingness to please making him a good choice if you're looking for a reliable ranch horse or trail horse.",
+    "image": "images/lot-34.jpg"
+  },
+  {
+    "lot": 35,
+    "registered_name": "ICE MAN",
+    "barn_name": "Ice Man",
+    "year": 2008,
     "color": "Sorrel",
     "breed": "AQHA",
+    "registration": "AQHA Grade",
     "sex": "Gelding",
-    "sire": "Rockin W",
-    "dam": "Aristo Rose",
-    "consignor": "Josie Pereira & Nat Stratton",
-    "agent": "",
-    "phone": "805.235.4591",
+    "sire": "",
+    "sire_detail": "",
+    "dam": "",
+    "dam_detail": "",
+    "consignor": "Diamond A Ranch",
     "notes": "",
-    "description": "DG is a 2021 sorrel AQHA gelding by Rockin W out of Aristo Rose. At five years old, he's a young gelding with a classic sorrel coat and the kind of breeding that points to ranch and arena versatility. Consigned by Josie Pereira and Nat Stratton from California \u2014 combining horsemen who know what a good horse looks like from both sides of the saddle.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-47/public"
+    "description": "Ice Man is a gentle sorrel gelding with a good handle, a willing attitude, and the kind of disposition that makes him enjoyable to ride every day. He is well broke, rides around nice, and has been used for all phases of ranch work. He is dependable on big gathers, comfortable covering country, and handles corral work with ease. Quiet to be around, easy to catch, and stands well for saddling and mounting, Ice Man is the same horse whether he's been ridden every day or given a little time off. If you're looking for a dependable ranch horse that's ready to go to work, gather cattle, check fences, or enjoy on the weekends, Ice Man is a solid, honest gelding that will fit a wide range of riders.",
+    "image": "images/lot-35.jpg"
   },
   {
-    "lot": 62,
-    "registered_name": "TPS DASH FOR WHISKEY",
-    "barn_name": "Cupid",
-    "year": 2018,
+    "lot": 36,
+    "registered_name": "HK TEN CENT BEER",
+    "barn_name": "Red Beer",
+    "year": 2019,
+    "color": "Bay Roan",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "TY Two Jack",
+    "sire_detail": "TY Two Jack (Mr Tyree Red (Mr Baron Red x Ima Tyree) x Rosalee Joe Jackie (Joe Jack Honey Bar x Rosalee Jackie))",
+    "dam": "Nichol A Shot",
+    "dam_detail": "Nichol A Shot (Four Shot (Continental Fly x Shot Of Eddie) x Happy Nicol (Happy's Cardinal x Nicolette Hancock 83))",
+    "consignor": "Consigned by Pablo Tapia",
+    "notes": "Ranch Employee Consignment",
+    "description": "Red Beer is a big stout ranch gelding that has been used at the ranch in Douglas, gathering large rocky pastures with ease. On his light days he is used sorting cattle at the feedlot, loading cattle trucks, and checking wheat cattle. Currently he is started in the heading and is a natural.",
+    "image": "images/lot-36.jpg"
+  },
+  {
+    "lot": 37,
+    "registered_name": "MALIBU",
+    "barn_name": "Malibu",
+    "year": 2024,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Grade",
+    "sex": "Gelding",
+    "sire": "",
+    "sire_detail": "",
+    "dam": "",
+    "dam_detail": "",
+    "consignor": "Consigned by Trail McCorkell",
+    "notes": "Ranch Employee Consignment",
+    "description": "This 2-year-old has been started correctly and is currently being used on the ranch gathering, sorting, and starting to drag calves to the fire. His sire is a high caliber head horse and pickup horse, and his dam was used in Jr High rodeos as a heel horse and a breakaway/goat horse. Malibu should make a great all around horse for either an adult or kid!",
+    "image": "images/lot-37.jpg"
+  },
+  {
+    "lot": 38,
+    "registered_name": "ICE COLD BUCKLES",
+    "barn_name": "Buckles",
+    "year": 2022,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Ron Burgandy Buckles",
+    "sire_detail": "Ron Burgandy Buckles (Buckle Up Jet (Bambino Jet x Manorcliffe) x Zan Belle (Zans Last Parr x Aggie Belle))",
+    "dam": "Ices Two Eyes On U",
+    "dam_detail": "Ices Two Eyes On U (Two Eyed Grey Badger (Two Eyed Red Buck x Coalies Showgirl) x Up Te Flair (Saddle Up Te x Jackie Flair))",
+    "consignor": "Consigned by Castle Mountain Performance Horses",
+    "notes": "Guest Consignment",
+    "description": "Buckles was born on the Diamond A Ranch and purchased as a colt in 2023. He's a smart young horse who will be right in your pocket. For the past two years he's worked cows in the rugged Beartooth Mountains of Montana under the training and direction of Blake Kornele, and he's done it all — sorting, gathering, and tying on in dead fall. He's a friendly horse who loves people and will perform whether you're putting him to work or riding for pleasure.",
+    "image": "images/lot-38.jpg"
+  },
+  {
+    "lot": 39,
+    "registered_name": "CB LUCKY LYNDA",
+    "barn_name": "CB Lucky Lynda",
+    "year": 2025,
+    "color": "Red Roan",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Boogers Cross Bell",
+    "sire_detail": "Boogers Cross Bell (Cee Booger Red (Cee Bar Badger 71 x Cross 1 59 Bell 71) x Troggies Harlander (Harlander x Miss Money Bars))",
+    "dam": "CK Red Bars",
+    "dam_detail": "CK Red Bars (El Guapo (Dual Pep x Smartilena) x Nell Bars (Whipps Red Curry x Finals Bar Moon))",
+    "consignor": "K4 Ranch",
+    "notes": "",
+    "description": "If you're a Cee Booger Red fan don't pass up the opportunity to get this talented young filly. She's a spitting image of her sire, Boogers Cross Bell, and if history repeats itself she will follow in the footsteps of her siblings. She's quick footed and inquisitive, watching her surroundings with interest. She is already a pro at going on the hot walker, being ponied from a horse and loading and unloading.",
+    "image": "images/lot-39.jpg"
+  },
+  {
+    "lot": 40,
+    "registered_name": "LADY GLITTERSPARKLES",
+    "barn_name": "Lady Glittersparkles",
+    "year": 2025,
+    "color": "Bay Roan",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Hughes That Booger",
+    "sire_detail": "Hughes That Booger (Thomas E Hughes (High Brow Cat x Smart Letha) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "CB Fiesta Glitter",
+    "dam_detail": "CB Fiesta Glitter (Boogers Cee Bar (Cee Booger Red x Troggies Harlander) x Razzle Dazzle Fiesta (Fiesta Royale x Annie Be Lonely))",
+    "consignor": "K4 Ranch",
+    "notes": "",
+    "description": "This dainty refined filly has all the right moves to be a standout athlete and is packed with a pedigree that will make your mouth water. She has the brains and the pedigree to create the type of horse that will stand up to a hard days work and a career in any event you see fit.",
+    "image": "images/lot-40.jpg"
+  },
+  {
+    "lot": 41,
+    "registered_name": "FLASHED ON FLEEK",
+    "barn_name": "Flashed On Fleek",
+    "year": 2025,
+    "color": "Sorrel",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "Booger Sharp Dressin",
+    "sire_detail": "Booger Sharp Dressin (Bestcreditmesunfrost (Sun Frost x Nonstopwithcredit) x Boogers Deb (Cee Booger Red x Troggies Harlander))",
+    "dam": "CB Flashin Past Ya",
+    "dam_detail": "CB Flashin Past Ya (Boogers Cee Bar (Cee Booger Red x Troggies Harlander) x Flashy Tycoon (Colonel Tycoon x Flashy Yen))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "Looking for the WOW factor in a young prospect? You can't go wrong with the potential in this guy. Sunfrost, Cee Booger Red and Driftood Ike all still on the papers and you can't mistake that there is an athlete in your presence.",
+    "image": "images/lot-41.jpg"
+  },
+  {
+    "lot": 42,
+    "registered_name": "TANGO MIKE WARRIOR",
+    "barn_name": "Tango Mike Warrior",
+    "year": 2025,
     "color": "Palomino",
     "breed": "AQHA",
-    "sex": "Mare",
-    "sire": "Whoze Your Daddy",
-    "dam": "SL Docs Little Dash",
-    "consignor": "Tel Schaack",
-    "agent": "",
-    "phone": "605.484.7359",
+    "registration": "AQHA Reg.",
+    "sex": "Gelding",
+    "sire": "DBR Burnt Warrior",
+    "sire_detail": "DBR Burnt Warrior (My Blue Warrior (Happy's Warrior x Setumup Miss 66) x GB Ikes Burntwood (Call Me Ike x Rose Tie))",
+    "dam": "Daddys Richie Girl",
+    "dam_detail": "Daddys Richie Girl (Chasing Daddy (Como Chez Hobby x Too Much Tivio) x Richies Sugar Girl (Dun Prescrip x Little Dag))",
+    "consignor": "K4 Ranch",
     "notes": "",
-    "description": "Cupid is a 2018 palomino AQHA mare by Whoze Your Daddy out of SL Docs Little Dash. That palomino color with Doc breeding on the bottom side makes her a golden package with substance. At eight years old, she's experienced and proven \u2014 the kind of mare that's ready to go to work on day one. Consigned by Tel Schaack from South Dakota to close out this incredible sale.",
-    "image": "https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/aotc-horse-sale-lot-48/public"
+    "description": "This sweet natured colt wants to be your friend and anything you show him to do he is willing. He stands tied patiently, loads and backs out of a trailer, picks his feet up, enjoys baths and is broke to the hot walker. He is ready to finish growing and then be ready to be started as a 2-year-old.",
+    "image": "images/lot-42.jpg"
+  },
+  {
+    "lot": 43,
+    "registered_name": "MISS MAKIN MAGIC",
+    "barn_name": "Miss Makin Magic",
+    "year": 2025,
+    "color": "Gray",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Chollas Good Gin",
+    "sire_detail": "Chollas Good Gin (Pauls Good N Red (Naturally San x Pauls Dee Dee 83) x Chollas Salty Lady (Saltys Willie x Hopi Ladys Guard))",
+    "dam": "WTWE Miss Voodoo",
+    "dam_detail": "WTWE Miss Voodoo (Voodoo Canyon (Shiners Voodoo Dr x Smart Lassie Chick) x Lil Miss Badger Cat (Cat Man Do x Miss Badger Zero))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "How can you look at this filly and not see the potential of a future star? A jam packed pedigree along with striking looks make her a favorite of everyone here. She sports a pedigree backed on the bottom side by Waggoner Ranch lineage. Her striking appearance is sure to catch your attention also.",
+    "image": "images/lot-43.jpg"
+  },
+  {
+    "lot": 44,
+    "registered_name": "LUCKY NIGHTINGALE",
+    "barn_name": "Lucky Nightingale",
+    "year": 2025,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Ron Burgandy Buckles",
+    "sire_detail": "Ron Burgandy Buckles (Buckle Up Jet (Bambino Jet x Manorcliffe) x Zan Belle (Zans Last Parr x Aggie Belle))",
+    "dam": "PM Harlans Luckybert",
+    "dam_detail": "PM Harlans Luckybert (Birch Creek Bert (Bayou Bert x Neel Four) x Harlans Delight (Harlans Hondo x Shampoos Delight))",
+    "consignor": "Diamond A Ranch",
+    "notes": "",
+    "description": "This striking filly is put together correctly conformation wise and she has the intelligence to become a stand-out performance prospect. By Ron Burgandy Buckles, she will have the bone structure and size we strive to breed into all ranch horses. All the ground work has been done, she loads and backs out of trailers, stands tied patiently, picks her feet up and has started to be introduced to saddle pads and saddling.",
+    "image": "images/lot-44.jpg"
+  },
+  {
+    "lot": 45,
+    "registered_name": "FROSTED SUPERVIXEN",
+    "barn_name": "Frosted Supervixen",
+    "year": 2017,
+    "color": "Palomino",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Bestcreditmesunfrost",
+    "sire_detail": "Bestcreditmesunfrost (Sunfrost (Doc's Jack Frost x Prissy Cline) x Nonstopwithcredit (Cash Not Credit x Nonstop Betty))",
+    "dam": "Boogers Drift",
+    "dam_detail": "Boogers Drift (Cee Booger Red (Cee Bar Badger 71 x Cross 1 59 Bell 71) x Drifts Moon (Drifts Vaquero x Shanta Bee 85))",
+    "consignor": "K4 Ranch",
+    "notes": "Sells confirmed in foal to CB Turn Up The Music (2027 foal)",
+    "description": "This striking palomino mare has a long line of high quality genetics, boasting Sunfrost, Cee Booger Red and Drifts Vaquero all up close on her pedigree. She will sell confirmed in foal to CB Turn Up The Music for a 2027 baby. She is halter broke but gentle and is easy to palpate and put in stocks.",
+    "image": "images/lot-45.jpg"
+  },
+  {
+    "lot": 46,
+    "registered_name": "PM PLAYGIRL BERTJOE",
+    "barn_name": "Playgirl",
+    "year": 2014,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Birch Creek Bert",
+    "sire_detail": "Birch Creek Bert (Bayou Bert (River Bert x Beggar's Flower 63) x Neel Four (Fairfax Joe Two x Easy Maudie))",
+    "dam": "Boleos Playgirl",
+    "dam_detail": "Boleos Playgirl (Playboys Braxton (Freckles Playboy x Poco Star Of 77 75) x Boleos Linda 82 (Mr Boleo Bar x Tino Baby))",
+    "consignor": "K4 Ranch",
+    "notes": "Sells with 2025 foal at side (by Booger Sharp Dressin); confirmed in foal to Genuinely Popular for 2027",
+    "description": "Playgirl is an easy breeder and has correct straight foals year after year. She is confirmed in foal to Genuinely Popular for a 2027 baby and is sporting a baby at her side by Booger Sharp Dressin. She has run in herds with other mares in large pastures and always stays fleshy and sound.",
+    "image": "images/lot-46.jpg"
+  },
+  {
+    "lot": 47,
+    "registered_name": "CHOLLAS DRIFTIN LADY",
+    "barn_name": "Chollas Driftin Lady",
+    "year": 2015,
+    "color": "Bay",
+    "breed": "AQHA",
+    "registration": "AQHA Reg.",
+    "sex": "Mare",
+    "sire": "Caleb Caytoe",
+    "sire_detail": "Caleb Caytoe (Beau C Fuss (Cutter Freckles x Beaukeencho Bars) x Flossie Caytoe (Ben Caytoe x Callie Caytoe))",
+    "dam": "Hopi Lady Drift",
+    "dam_detail": "Hopi Lady Drift (Chips Devil Drift (Drifts Chip x Haleys Jubilee) x Hopi Ladys Guard (Palace Guard 75 x Hopi Lady 82))",
+    "consignor": "Diamond A Ranch",
+    "notes": "Sells with foal at side (by Genuinely Popular); exposed to Step Over Boogers for 2027",
+    "description": "Here is a mare that was born and raised on the Diamond A Ranch. She knows how to take care of herself and her foals in all the elements that Arizona has to offer. She is an easy breeder and raises strong, correct foals year after year. She sells with a foal at her side by Genuinely Popular and is exposed to Step Over Boogers for a 2027 foal.",
+    "image": "images/lot-47.jpg"
   }
 ];
 
@@ -1742,7 +1799,7 @@ function init() {
 
 function buildFilters() {
   const sexes = [...new Set(LOTS.map(l => l.sex))].sort();
-  const breeds = [...new Set(LOTS.map(l => l.breed))].sort();
+  const breeds = [...new Set(LOTS.map(l => l.registration))].sort();
   const colors = [...new Set(LOTS.map(l => l.color))].filter(c => c !== '—').sort();
 
   const sexRow = document.getElementById('sexFilters');
@@ -1759,7 +1816,7 @@ function buildFilters() {
   breeds.forEach(br => {
     const b = document.createElement('button');
     b.className = 'fbtn';
-    b.textContent = br + ' (' + LOTS.filter(l => l.breed === br).length + ')';
+    b.textContent = br + ' (' + LOTS.filter(l => l.registration === br).length + ')';
     b.dataset.val = br;
     b.onclick = () => toggleFilter('breed', br, b);
     breedRow.appendChild(b);
@@ -1819,12 +1876,12 @@ function applyFilters() {
 
   let filtered = LOTS.filter(l => {
     if (activeSex && l.sex !== activeSex) return false;
-    if (activeBreed && l.breed !== activeBreed) return false;
+    if (activeBreed && l.registration !== activeBreed) return false;
     if (activeColor && l.color !== activeColor) return false;
     if (q) {
       const haystack = [
         l.registered_name, l.barn_name, l.consignor, l.agent,
-        l.sire, l.dam, l.breed, l.color, l.phone, l.description || '',
+        l.sire, l.dam, l.sire_detail, l.dam_detail, l.registration, l.color, l.description || '',
         'lot ' + l.lot, '#' + l.lot
       ].join(' ').toLowerCase();
       if (!haystack.includes(q)) return false;
@@ -1838,7 +1895,7 @@ function applyFilters() {
     let va, vb;
     if (key === 'lot') { va = a.lot; vb = b.lot; }
     else if (key === 'year') { va = a.year; vb = b.year; }
-    else if (key === 'breed') { va = a.breed.toLowerCase(); vb = b.breed.toLowerCase(); }
+    else if (key === 'breed') { va = a.registration.toLowerCase(); vb = b.registration.toLowerCase(); }
     else if (key === 'color') { va = a.color.toLowerCase(); vb = b.color.toLowerCase(); }
     else if (key === 'name') { va = a.registered_name.toLowerCase(); vb = b.registered_name.toLowerCase(); }
     else if (key === 'consignor') { va = a.consignor.toLowerCase(); vb = b.consignor.toLowerCase(); }
@@ -1890,7 +1947,7 @@ function updateActiveFiltersBar(q) {
   let tags = '';
   if (q) tags += '<span class="af-tag">Search: "' + q + '"<span class="af-x" onclick="document.getElementById(\'searchInput\').value=\'\';applyFilters()">✕</span></span>';
   if (activeSex) tags += '<span class="af-tag">Sex: ' + activeSex + '<span class="af-x" onclick="removeFilter(\'sex\')">✕</span></span>';
-  if (activeBreed) tags += '<span class="af-tag">Breed: ' + activeBreed + '<span class="af-x" onclick="removeFilter(\'breed\')">✕</span></span>';
+  if (activeBreed) tags += '<span class="af-tag">Registration: ' + activeBreed + '<span class="af-x" onclick="removeFilter(\'breed\')">✕</span></span>';
   if (activeColor) tags += '<span class="af-tag">Color: ' + activeColor + '<span class="af-x" onclick="removeFilter(\'color\')">✕</span></span>';
 
   if (tags) {
@@ -1909,9 +1966,12 @@ function renderCards() {
 
   LOTS.forEach(l => {
     const sexClass = l.sex.toLowerCase();
-    const pedigree = (l.sire && l.dam) ? l.sire + ' × ' + l.dam : (l.sire || l.dam || '');
     const notesTag = l.notes ? '<span class="tag tag-notes">' + l.notes + '</span>' : '';
+    const regTag = l.registration ? '<span class="tag tag-breed">' + l.registration + '</span>' : '';
     const desc = l.description || '';
+    const sireLine = l.sire ? (l.sire_detail || l.sire) : '';
+    const damLine = l.dam ? (l.dam_detail || l.dam) : '';
+    const noPedigree = (!sireLine && !damLine) ? '<div class="dl"><span class="dt">Pedigree</span><span class="dd">Not listed — sold as ' + (l.registration || 'grade') + '</span></div>' : '';
 
     const card = document.createElement('div');
     card.className = 'lot-card';
@@ -1928,22 +1988,22 @@ function renderCards() {
       '<div class="card-body">' +
         '<div class="card-tags">' +
           '<span class="tag tag-sex ' + sexClass + '">' + l.sex + '</span>' +
-          '<span class="tag tag-breed">' + l.breed + '</span>' +
+          regTag +
           '<span class="tag tag-color">' + l.color + '</span>' +
           '<span class="tag tag-year">' + l.year + '</span>' +
           notesTag +
         '</div>' +
         (desc ? '<div class="card-desc">' + desc + '</div>' : '') +
         '<div class="card-details">' +
-          (pedigree ? '<div class="dl"><span class="dt">Pedigree</span><span class="dd">' + pedigree + '</span></div>' : '') +
+          (sireLine ? '<div class="dl"><span class="dt">Sire</span><span class="dd">' + sireLine + '</span></div>' : '') +
+          (damLine ? '<div class="dl"><span class="dt">Dam</span><span class="dd">' + damLine + '</span></div>' : '') +
+          noPedigree +
         '</div>' +
       '</div>' +
       '<div class="card-footer">' +
         '<div>' +
           '<div class="consignor-name">' + l.consignor + '</div>' +
-          (l.agent ? '<div class="consignor-agent">' + l.agent + '</div>' : '') +
         '</div>' +
-        '<div class="consignor-phone">' + l.phone + '</div>' +
       '</div>';
 
     grid.appendChild(card);
