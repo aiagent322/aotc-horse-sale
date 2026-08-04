@@ -218,6 +218,24 @@ body {
 .bidding-note li { margin-bottom: 4px; }
 .history-card p { font-size: 0.85rem; line-height: 1.65; margin-bottom: 10px; color: var(--text); }
 .history-card p:last-child { margin-bottom: 0; }
+.sponsor-category { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin: 22px 0 10px; text-align: center; }
+.sponsor-category:first-of-type { margin-top: 4px; }
+.sponsor-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 620px) { .sponsor-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 960px) { .sponsor-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.sponsor-card {
+  background: var(--white);
+  border: 1px solid var(--tan-light);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+}
+.sponsor-card .sname { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brown-dark); font-size: 1rem; margin-bottom: 3px; }
+.sponsor-card .stag { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+.sponsor-card .sdesc { font-size: 0.78rem; color: var(--text); line-height: 1.5; margin-bottom: 6px; }
+.sponsor-card .scontact { font-size: 0.72rem; color: var(--brown-light); line-height: 1.6; }
+.sponsor-card .scontact a { color: var(--gold); text-decoration: none; }
+.sponsor-card .scontact a:hover { text-decoration: underline; }
 .welcome-note {
   font-style: italic;
   font-size: 0.9rem;
@@ -732,6 +750,7 @@ body {
   <a href="#schedule">Schedule</a>
   <a href="#bidding">Bidding Info</a>
   <a href="#about">About the Ranches</a>
+  <a href="#sponsors">Sponsors</a>
   <a href="terms.html">Conditions of Sale</a>
 </nav>
 
@@ -837,6 +856,7 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
       <div class="contact-item"><span class="role">Owner / Sale Manager</span>Sarah Kieckhefer — 928-925-8939</div>
       <div class="contact-item"><span class="role">Sale Secretary</span>Carrie Gross — 602-510-4940</div>
       <div class="contact-item"><span class="role">Office Manager</span>Dena Rodriguez — 928-899-7462</div>
+      <div class="contact-item"><span class="role">Mailing Address</span>Legacy Ranch Horse Sale, P.O. Box 11563, Prescott, AZ 86304</div>
     </div>
   </div>
 
@@ -914,6 +934,125 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
     <p>The Diamond A Ranch, also known as The Big Boquillas, is the largest cattle ranch in Arizona. Owned by the Navajo Nation, the ranch covers 750,000 acres and stretches 75 miles from the town of Seligman to the South Rim of the Grand Canyon. In 1982 Harvey Dietrich and partner Richard Rudnick took over the Diamond A from Victorio Cattle Company, operating as Cholla Livestock; in 2018, at age 83, Dietrich took on a new partner — Rick Kieckhefer of the K4 Ranch. With Harvey's passing in 2020, his remaining interest was sold to the Kieckhefers, and his legacy continues today.</p>
     <p>The ranch runs an extensive cattle operation of 6,000 mother cows, with ten full-time camp cowboys covering seven ranch camps. The size and remote locations of the pastures demand horses that are both athletic and tough — used to brand calves, gather cattle, sort in the corrals and outside, check fence, gather horses, halter break weanling foals, doctor cattle, and cover a lot of miles through all kinds of country.</p>
     <p>The Diamond A currently runs a remuda of 75 working saddle horses, 35 broodmares, 6 stallions, and 35 young geldings and fillies, run outside in the same tough country they work in. Bloodlines include PopularResort Figure, Metallic Cat, Tanquery Gin, Doc O'Lena, Colonel Freckles, Peppy San Badger, Bueno Chex, Driftwood, Zan Parr Bar, PlayGun, Easy Jet, and Doc Tom Tucker.</p>
+  </div>
+</div>
+
+<!-- SPONSORS -->
+<div class="info-section" id="sponsors">
+  <div class="info-section-title">Sale Sponsors</div>
+  <div class="info-section-sub">With thanks to the businesses supporting the 11th Annual Legacy Ranch Horse Sale</div>
+
+  <div class="sponsor-category">Insurance &amp; Risk Management</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">Specialty Risk Insurance</div>
+      <div class="stag">Presenting Sponsor — Match Calf Roping</div>
+      <div class="sdesc">Farm &amp; Ranch, Agribusiness, LRP/PRF &amp; Crop, Trucking &amp; Cargo, Commercial, Employee Benefits &amp; more.</div>
+      <div class="scontact">Kirk Maberry 432-202-1537 · Arthur Maberry 325-338-7007 · Mike Fester 405-626-7550</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">CKP Insurance</div>
+      <div class="stag">Specializing in PRF &amp; LRP</div>
+      <div class="sdesc">USDA Risk Management Agency Pasture, Rangeland &amp; Forage insurance for drought protection. Part of the Brown &amp; Brown Insurance Services team.</div>
+      <div class="scontact">877-CKP-INS1 (877-257-4671) · <a href="https://www.ckpinsurance.com" target="_blank">ckpinsurance.com</a></div>
+    </div>
+  </div>
+
+  <div class="sponsor-category">Nutrition &amp; Animal Health</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">PerforMix Nutrition Systems</div>
+      <div class="stag">"Your Nutritional Answers Company"</div>
+      <div class="sdesc">RuMax BoviBox mineral, protein &amp; vitamin supplements for cattle — presenting sponsor of the Stray Gathering roping.</div>
+      <div class="scontact">800.426.3572 · <a href="https://www.performixnutrition.com" target="_blank">performixnutrition.com</a></div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">Renew Gold</div>
+      <div class="stag">"Feed Smarter. Feed Less. See More."</div>
+      <div class="sdesc">High-performance equine nutrition — Renew Gold, Renew Gold Senior &amp; Renew Gold Xtra.</div>
+      <div class="scontact">855-377-3639 · <a href="https://www.renewgold.com" target="_blank">renewgold.com</a></div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">Zoetis</div>
+      <div class="stag">Equine Dewormers &amp; Vaccines</div>
+      <div class="sdesc">Maker of Quest and Quest Plus Gel dewormers; all sale horses are fully vaccinated with Zoetis vaccines.</div>
+      <div class="scontact">See product labeling for full safety information.</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">Copper Ridge Equine</div>
+      <div class="stag">Sports Medicine &amp; Surgery</div>
+      <div class="sdesc">Full-service equine medical &amp; surgery center — On-Site Vet for the sale.</div>
+      <div class="scontact">37506 N 11th Ave, Phoenix, AZ · 480-281-5682 · <a href="https://www.cridgeequine.com" target="_blank">cridgeequine.com</a></div>
+    </div>
+  </div>
+
+  <div class="sponsor-category">Local Beef &amp; Restaurants</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">Caviness Beef Packers</div>
+      <div class="stag">"Local Beef. Local Pride. Your Regional Partner."</div>
+      <div class="scontact"><a href="https://www.cavinessbeef.com" target="_blank">cavinessbeef.com</a> · @cavinessbeefpackers</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">K4 Copper State Reserve</div>
+      <div class="stag">Served in Arizona's Finest Restaurants</div>
+      <div class="sdesc">Arizona Grown beef program from K4 Ranch.</div>
+      <div class="scontact"><a href="https://www.k4copperstatereserve.com" target="_blank">k4copperstatereserve.com</a></div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">K4 Gourmet Beef</div>
+      <div class="stag">Retail Butcher Shop</div>
+      <div class="scontact">1513 W Gurley Street, Prescott, AZ 86305 · (928) 925-7735 · Mon–Sat 10am–5pm · <a href="https://www.gourmetbeef.com" target="_blank">gourmetbeef.com</a></div>
+    </div>
+  </div>
+
+  <div class="sponsor-category">Equipment &amp; Services</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">Dykstra Machinery</div>
+      <div class="stag">Serving All of Arizona — Casa Grande, AZ</div>
+      <div class="sdesc">Full range of sales and service specializing in new and used construction and agricultural equipment.</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">Western Laundry &amp; Dry Cleaning</div>
+      <div class="stag">Wash/Dry/Fold · Linen Rental · Commercial/Janitorial · Alterations</div>
+      <div class="scontact">Prescott — 1046 Willow Creek Rd Suite 103 · Prescott Valley — 7025 Florentine Rd · Chino Valley — 382 W Butterfield Rd · Wickenburg — 864 W Wickenburg Way</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">Creations in Thread</div>
+      <div class="stag">Screenprint &amp; Embroidery — Wickenburg &amp; Prescott, AZ</div>
+      <div class="sdesc">Jackets, awards, patches, stickers, banners, caps &amp; more.</div>
+      <div class="scontact">928-684-7936 · <a href="https://www.creationsinthread.com" target="_blank">creationsinthread.com</a> · <a href="mailto:orders@creationsinthread.com">orders@creationsinthread.com</a></div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">American Hat Company</div>
+      <div class="stag">"Setting the Standard Since 1915"</div>
+      <div class="scontact"><a href="https://www.americanhat.net" target="_blank">americanhat.net</a></div>
+    </div>
+  </div>
+
+  <div class="sponsor-category">Real Estate &amp; Building</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">Jess Savoini</div>
+      <div class="stag">Local Real Estate Agent — Leslie Jacobs Real Estate Team / Iannelli and Associates</div>
+      <div class="scontact">928.899.1080</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sname">928 Custom Builders</div>
+      <div class="stag">Northern Arizona</div>
+      <div class="scontact">Thomas Savoini · 928-379-3592 · ROC #34588</div>
+    </div>
+  </div>
+
+  <div class="sponsor-category">Guest Ranch</div>
+  <div class="sponsor-grid">
+    <div class="sponsor-card">
+      <div class="sname">Hoffman Ranch</div>
+      <div class="stag">"Bringing Back Balance" — Angus &amp; Horned/Polled Hereford Bulls</div>
+      <div class="sdesc">Fall Bull Sale November 12, 2026 · Spring Bull Sale February 19, 2027 — both at the Hoffman Ranch Sale Facility near Thedford, Nebraska. Selling 600+ bulls between the two sales. Thanks K4 Ranches for the investment in Hoffman genetics!</div>
+      <div class="scontact">39575 E. Antelope Valley Road, Thedford, NE 69166 · Office 308.645.2279 · Jason 530.604.5096 · Denny 406.425.0859 · <a href="https://www.hoffmanranch.com" target="_blank">HoffmanRanch.com</a></div>
+    </div>
   </div>
 </div>
 
