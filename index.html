@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Legacy Ranch Horse Sale – 11th Annual Catalog 2026</title>
+<meta name="description" content="11th Annual Legacy Ranch Horse Sale — K4 Ranch & Diamond A Ranch, September 19, 2026, Prescott Rodeo Grounds, Arizona. Browse the full 47-lot catalog, sale schedule, bidding info, and sponsor directory.">
+<link rel="canonical" href="https://aotc-horse-sale.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Legacy Ranch Horse Sale">
+<meta property="og:title" content="Legacy Ranch Horse Sale – 11th Annual Catalog 2026">
+<meta property="og:description" content="K4 Ranch & Diamond A Ranch, September 19, 2026, Prescott Rodeo Grounds, Arizona. Browse the full 47-lot catalog, sale schedule, bidding info, and sponsor directory.">
+<meta property="og:url" content="https://aotc-horse-sale.pages.dev/">
+<meta property="og:image" content="https://aotc-horse-sale.pages.dev/images/lot-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legacy Ranch Horse Sale – 11th Annual Catalog 2026">
+<meta name="twitter:description" content="K4 Ranch & Diamond A Ranch, September 19, 2026, Prescott Rodeo Grounds, Arizona. Browse the full 47-lot catalog, sale schedule, bidding info, and sponsor directory.">
+<meta name="twitter:image" content="https://aotc-horse-sale.pages.dev/images/lot-01.jpg">
+<meta name="theme-color" content="#3A2A1C">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -225,6 +241,7 @@ body {
   transition: opacity 0.15s;
 }
 .sponsor-thumb:hover { opacity: 0.85; }
+.sponsor-thumb:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 
 /* ── LIGHTBOX ── */
 .lightbox-overlay {
@@ -236,6 +253,7 @@ body {
   justify-content: center;
   padding: 24px 12px;
   cursor: zoom-out;
+  outline: none;
 }
 .lightbox-overlay.show { display: flex; }
 .lightbox-overlay img {
@@ -766,7 +784,7 @@ body {
   <a href="#bidding">Bidding Info</a>
   <a href="#about">About the Ranches</a>
   <a href="#sponsors">Sponsors</a>
-  <a href="terms.html">Conditions of Sale</a>
+  <a href="/terms">Conditions of Sale</a>
 </nav>
 
 <!-- STATS BAR -->
@@ -829,8 +847,8 @@ body {
 <button class="print-btn" onclick="window.print()">🖨 Print Catalog</button>
 
 <!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Enlarged sponsor advertisement" tabindex="-1">
+  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close enlarged image">&times;</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
@@ -919,7 +937,7 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
     <h3>Internet Bidding — Watch &amp; Bid on CCI.live</h3>
     <div class="bidding-note">
       <ul>
-        <li>Register at <a class="footer-link" href="https://www.cci.live" target="_blank">cci.live</a> to ensure a smooth, secure bidding experience.</li>
+        <li>Register at <a class="footer-link" href="https://www.cci.live" target="_blank" rel="noopener noreferrer">cci.live</a> to ensure a smooth, secure bidding experience.</li>
         <li>As a buyer you do NOT need to log in to watch the sale, but you must have a validated account to bid.</li>
         <li>To bid online: go to www.CCI.live in a modern browser → click the sale schedule page → click the sale of interest → click Bid Online, Register, then "Get Buyer Number."</li>
         <li>Works on cellular device, laptop, desktop, or tablet — a current browser and stationary, healthy internet connection give the best experience.</li>
@@ -934,7 +952,7 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
     <div class="bidding-note">Complete the Phone/Absentee Bidding Form, and confirm your shipping address and the horses you wish to bid on with the sale secretary by 12:00 p.m. on September 19, 2026.</div>
   </div>
 
-  <a class="terms-link-banner" href="terms.html">View full Conditions of Sale &amp; Buyer Notices →</a>
+  <a class="terms-link-banner" href="/terms">View full Conditions of Sale &amp; Buyer Notices →</a>
 </div>
 
 <!-- ABOUT THE RANCHES -->
@@ -966,115 +984,115 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
   <div class="sponsor-category">Insurance &amp; Risk Management</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/specialty-risk-thumb.jpg" data-full="images/sponsors/specialty-risk-full.jpg" alt="Specialty Risk Insurance advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/specialty-risk-thumb.jpg" data-full="images/sponsors/specialty-risk-full.jpg" alt="Specialty Risk Insurance advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Specialty Risk Insurance</div>
       <div class="stag">Presenting Sponsor — Match Calf Roping</div>
       <div class="sdesc">Farm &amp; Ranch, Agribusiness, LRP/PRF &amp; Crop, Trucking &amp; Cargo, Commercial, Employee Benefits &amp; more.</div>
       <div class="scontact">Kirk Maberry 432-202-1537 · Arthur Maberry 325-338-7007 · Mike Fester 405-626-7550</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/ckp-insurance-thumb.jpg" data-full="images/sponsors/ckp-insurance-full.jpg" alt="CKP Insurance advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/ckp-insurance-thumb.jpg" data-full="images/sponsors/ckp-insurance-full.jpg" alt="CKP Insurance advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">CKP Insurance</div>
       <div class="stag">Specializing in PRF &amp; LRP</div>
       <div class="sdesc">USDA Risk Management Agency Pasture, Rangeland &amp; Forage insurance for drought protection. Part of the Brown &amp; Brown Insurance Services team.</div>
-      <div class="scontact">877-CKP-INS1 (877-257-4671) · <a href="https://www.ckpinsurance.com" target="_blank">ckpinsurance.com</a></div>
+      <div class="scontact">877-CKP-INS1 (877-257-4671) · <a href="https://www.ckpinsurance.com" target="_blank" rel="noopener noreferrer">ckpinsurance.com</a></div>
     </div>
   </div>
 
   <div class="sponsor-category">Nutrition &amp; Animal Health</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/performix-thumb.jpg" data-full="images/sponsors/performix-full.jpg" alt="PerforMix Nutrition Systems advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/performix-thumb.jpg" data-full="images/sponsors/performix-full.jpg" alt="PerforMix Nutrition Systems advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">PerforMix Nutrition Systems</div>
       <div class="stag">"Your Nutritional Answers Company"</div>
       <div class="sdesc">RuMax BoviBox mineral, protein &amp; vitamin supplements for cattle — presenting sponsor of the Stray Gathering roping.</div>
-      <div class="scontact">800.426.3572 · <a href="https://www.performixnutrition.com" target="_blank">performixnutrition.com</a></div>
+      <div class="scontact">800.426.3572 · <a href="https://www.performixnutrition.com" target="_blank" rel="noopener noreferrer">performixnutrition.com</a></div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/renew-gold-thumb.jpg" data-full="images/sponsors/renew-gold-full.jpg" alt="Renew Gold advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/renew-gold-thumb.jpg" data-full="images/sponsors/renew-gold-full.jpg" alt="Renew Gold advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Renew Gold</div>
       <div class="stag">"Feed Smarter. Feed Less. See More."</div>
       <div class="sdesc">High-performance equine nutrition — Renew Gold, Renew Gold Senior &amp; Renew Gold Xtra.</div>
-      <div class="scontact">855-377-3639 · <a href="https://www.renewgold.com" target="_blank">renewgold.com</a></div>
+      <div class="scontact">855-377-3639 · <a href="https://www.renewgold.com" target="_blank" rel="noopener noreferrer">renewgold.com</a></div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/zoetis-thumb.jpg" data-full="images/sponsors/zoetis-full.jpg" alt="Zoetis advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/zoetis-thumb.jpg" data-full="images/sponsors/zoetis-full.jpg" alt="Zoetis advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Zoetis</div>
       <div class="stag">Equine Dewormers &amp; Vaccines</div>
       <div class="sdesc">Maker of Quest and Quest Plus Gel dewormers; all sale horses are fully vaccinated with Zoetis vaccines.</div>
       <div class="scontact">See product labeling for full safety information.</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/copper-ridge-equine-thumb.jpg" data-full="images/sponsors/copper-ridge-equine-full.jpg" alt="Copper Ridge Equine advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/copper-ridge-equine-thumb.jpg" data-full="images/sponsors/copper-ridge-equine-full.jpg" alt="Copper Ridge Equine advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Copper Ridge Equine</div>
       <div class="stag">Sports Medicine &amp; Surgery</div>
       <div class="sdesc">Full-service equine medical &amp; surgery center — On-Site Vet for the sale.</div>
-      <div class="scontact">37506 N 11th Ave, Phoenix, AZ · 480-281-5682 · <a href="https://www.cridgeequine.com" target="_blank">cridgeequine.com</a></div>
+      <div class="scontact">37506 N 11th Ave, Phoenix, AZ · 480-281-5682 · <a href="https://www.cridgeequine.com" target="_blank" rel="noopener noreferrer">cridgeequine.com</a></div>
     </div>
   </div>
 
   <div class="sponsor-category">Local Beef &amp; Restaurants</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/caviness-beef-thumb.jpg" data-full="images/sponsors/caviness-beef-full.jpg" alt="Caviness Beef Packers advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/caviness-beef-thumb.jpg" data-full="images/sponsors/caviness-beef-full.jpg" alt="Caviness Beef Packers advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Caviness Beef Packers</div>
       <div class="stag">"Local Beef. Local Pride. Your Regional Partner."</div>
-      <div class="scontact"><a href="https://www.cavinessbeef.com" target="_blank">cavinessbeef.com</a> · @cavinessbeefpackers</div>
+      <div class="scontact"><a href="https://www.cavinessbeef.com" target="_blank" rel="noopener noreferrer">cavinessbeef.com</a> · @cavinessbeefpackers</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/k4-copper-state-reserve-thumb.jpg" data-full="images/sponsors/k4-copper-state-reserve-full.jpg" alt="K4 Copper State Reserve advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/k4-copper-state-reserve-thumb.jpg" data-full="images/sponsors/k4-copper-state-reserve-full.jpg" alt="K4 Copper State Reserve advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">K4 Copper State Reserve</div>
       <div class="stag">Served in Arizona's Finest Restaurants</div>
       <div class="sdesc">Arizona Grown beef program from K4 Ranch.</div>
-      <div class="scontact"><a href="https://www.k4copperstatereserve.com" target="_blank">k4copperstatereserve.com</a></div>
+      <div class="scontact"><a href="https://www.k4copperstatereserve.com" target="_blank" rel="noopener noreferrer">k4copperstatereserve.com</a></div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/k4-gourmet-beef-thumb.jpg" data-full="images/sponsors/k4-gourmet-beef-full.jpg" alt="K4 Gourmet Beef advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/k4-gourmet-beef-thumb.jpg" data-full="images/sponsors/k4-gourmet-beef-full.jpg" alt="K4 Gourmet Beef advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">K4 Gourmet Beef</div>
       <div class="stag">Retail Butcher Shop</div>
-      <div class="scontact">1513 W Gurley Street, Prescott, AZ 86305 · (928) 925-7735 · Mon–Sat 10am–5pm · <a href="https://www.gourmetbeef.com" target="_blank">gourmetbeef.com</a></div>
+      <div class="scontact">1513 W Gurley Street, Prescott, AZ 86305 · (928) 925-7735 · Mon–Sat 10am–5pm · <a href="https://www.gourmetbeef.com" target="_blank" rel="noopener noreferrer">gourmetbeef.com</a></div>
     </div>
   </div>
 
   <div class="sponsor-category">Equipment &amp; Services</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/dykstra-machinery-thumb.jpg" data-full="images/sponsors/dykstra-machinery-full.jpg" alt="Dykstra Machinery advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/dykstra-machinery-thumb.jpg" data-full="images/sponsors/dykstra-machinery-full.jpg" alt="Dykstra Machinery advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Dykstra Machinery</div>
       <div class="stag">Serving All of Arizona — Casa Grande, AZ</div>
       <div class="sdesc">Full range of sales and service specializing in new and used construction and agricultural equipment.</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/western-laundry-thumb.jpg" data-full="images/sponsors/western-laundry-full.jpg" alt="Western Laundry & Dry Cleaning advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/western-laundry-thumb.jpg" data-full="images/sponsors/western-laundry-full.jpg" alt="Western Laundry & Dry Cleaning advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Western Laundry &amp; Dry Cleaning</div>
       <div class="stag">Wash/Dry/Fold · Linen Rental · Commercial/Janitorial · Alterations</div>
       <div class="scontact">Prescott — 1046 Willow Creek Rd Suite 103 · Prescott Valley — 7025 Florentine Rd · Chino Valley — 382 W Butterfield Rd · Wickenburg — 864 W Wickenburg Way</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/creations-in-thread-thumb.jpg" data-full="images/sponsors/creations-in-thread-full.jpg" alt="Creations in Thread advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/creations-in-thread-thumb.jpg" data-full="images/sponsors/creations-in-thread-full.jpg" alt="Creations in Thread advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Creations in Thread</div>
       <div class="stag">Screenprint &amp; Embroidery — Wickenburg &amp; Prescott, AZ</div>
       <div class="sdesc">Jackets, awards, patches, stickers, banners, caps &amp; more.</div>
-      <div class="scontact">928-684-7936 · <a href="https://www.creationsinthread.com" target="_blank">creationsinthread.com</a> · <a href="mailto:orders@creationsinthread.com">orders@creationsinthread.com</a></div>
+      <div class="scontact">928-684-7936 · <a href="https://www.creationsinthread.com" target="_blank" rel="noopener noreferrer">creationsinthread.com</a> · <a href="mailto:orders@creationsinthread.com">orders@creationsinthread.com</a></div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/american-hat-thumb.jpg" data-full="images/sponsors/american-hat-full.jpg" alt="American Hat Company advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/american-hat-thumb.jpg" data-full="images/sponsors/american-hat-full.jpg" alt="American Hat Company advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">American Hat Company</div>
       <div class="stag">"Setting the Standard Since 1915"</div>
-      <div class="scontact"><a href="https://www.americanhat.net" target="_blank">americanhat.net</a></div>
+      <div class="scontact"><a href="https://www.americanhat.net" target="_blank" rel="noopener noreferrer">americanhat.net</a></div>
     </div>
   </div>
 
   <div class="sponsor-category">Real Estate &amp; Building</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/jess-savoini-thumb.jpg" data-full="images/sponsors/jess-savoini-full.jpg" alt="Jess Savoini advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/jess-savoini-thumb.jpg" data-full="images/sponsors/jess-savoini-full.jpg" alt="Jess Savoini advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Jess Savoini</div>
       <div class="stag">Local Real Estate Agent — Leslie Jacobs Real Estate Team / Iannelli and Associates</div>
       <div class="scontact">928.899.1080</div>
     </div>
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/928-custom-builders-thumb.jpg" data-full="images/sponsors/928-custom-builders-full.jpg" alt="928 Custom Builders advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/928-custom-builders-thumb.jpg" data-full="images/sponsors/928-custom-builders-full.jpg" alt="928 Custom Builders advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">928 Custom Builders</div>
       <div class="stag">Northern Arizona</div>
       <div class="scontact">Thomas Savoini · 928-379-3592 · ROC #34588</div>
@@ -1084,11 +1102,11 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
   <div class="sponsor-category">Guest Ranch</div>
   <div class="sponsor-grid">
     <div class="sponsor-card">
-      <img class="sponsor-thumb" src="images/sponsors/hoffman-ranch-thumb.jpg" data-full="images/sponsors/hoffman-ranch-full.jpg" alt="Hoffman Ranch advertisement" loading="lazy" onclick="openLightbox(this)">
+      <img class="sponsor-thumb" tabindex="0" role="button" src="images/sponsors/hoffman-ranch-thumb.jpg" data-full="images/sponsors/hoffman-ranch-full.jpg" alt="Hoffman Ranch advertisement" loading="lazy" onclick="openLightbox(this)">
       <div class="sname">Hoffman Ranch</div>
       <div class="stag">"Bringing Back Balance" — Angus &amp; Horned/Polled Hereford Bulls</div>
       <div class="sdesc">Fall Bull Sale November 12, 2026 · Spring Bull Sale February 19, 2027 — both at the Hoffman Ranch Sale Facility near Thedford, Nebraska. Selling 600+ bulls between the two sales. Thanks K4 Ranches for the investment in Hoffman genetics!</div>
-      <div class="scontact">39575 E. Antelope Valley Road, Thedford, NE 69166 · Office 308.645.2279 · Jason 530.604.5096 · Denny 406.425.0859 · <a href="https://www.hoffmanranch.com" target="_blank">HoffmanRanch.com</a></div>
+      <div class="scontact">39575 E. Antelope Valley Road, Thedford, NE 69166 · Office 308.645.2279 · Jason 530.604.5096 · Denny 406.425.0859 · <a href="https://www.hoffmanranch.com" target="_blank" rel="noopener noreferrer">HoffmanRanch.com</a></div>
     </div>
   </div>
 </div>
@@ -1099,8 +1117,8 @@ Each year we cherish seeing familiar faces while welcoming new friends and spend
   <div class="footer-event">11th Annual Legacy Ranch Horse Sale</div>
   <div class="footer-info">Hosted by K4 Ranch &amp; Diamond A Ranch</div>
   <div class="footer-info">Saturday, September 19, 2026 · Prescott Rodeo Grounds · Prescott, AZ</div>
-  <div class="footer-info">Official event info: <a class="footer-link" href="https://ranchhorsesale.com" target="_blank">ranchhorsesale.com</a> · Bid online at <a class="footer-link" href="https://www.cci.live" target="_blank">cci.live</a></div>
-  <div class="footer-info"><a class="footer-link" href="terms.html">Conditions of Sale &amp; Buyer Notices</a></div>
+  <div class="footer-info">Official event info: <a class="footer-link" href="https://ranchhorsesale.com" target="_blank" rel="noopener noreferrer">ranchhorsesale.com</a> · Bid online at <a class="footer-link" href="https://www.cci.live" target="_blank" rel="noopener noreferrer">cci.live</a></div>
+  <div class="footer-info"><a class="footer-link" href="/terms">Conditions of Sale &amp; Buyer Notices</a></div>
   <div class="footer-disclaimer">AI-generated content — subject to errors and omissions · Not affiliated with the Legacy Ranch Horse Sale, K4 Ranch, or Diamond A Ranch</div>
 </footer>
 
@@ -2186,6 +2204,8 @@ function renderCards() {
   });
 }
 
+let lastLightboxTrigger = null;
+
 function openLightbox(imgEl) {
   const overlay = document.getElementById('lightboxOverlay');
   const full = document.getElementById('lightboxImg');
@@ -2193,16 +2213,27 @@ function openLightbox(imgEl) {
   full.alt = imgEl.alt;
   overlay.classList.add('show');
   document.body.style.overflow = 'hidden';
+  lastLightboxTrigger = imgEl;
+  overlay.focus();
 }
 
 function closeLightbox(e) {
   if (e) e.stopPropagation();
-  document.getElementById('lightboxOverlay').classList.remove('show');
+  const overlay = document.getElementById('lightboxOverlay');
+  overlay.classList.remove('show');
   document.body.style.overflow = '';
+  if (lastLightboxTrigger) {
+    lastLightboxTrigger.focus();
+    lastLightboxTrigger = null;
+  }
 }
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('sponsor-thumb')) {
+    e.preventDefault();
+    openLightbox(e.target);
+  }
 });
 
 init();
